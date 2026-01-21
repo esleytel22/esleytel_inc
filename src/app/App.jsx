@@ -22,7 +22,7 @@ export function StickyBannerDemo() {
   return (
       <StickyBanner className="bg-gradient-to-b from-blue-500 to-blue-600">
         <p className="mb-0 max-w-[90%] text-white drop-shadow-md">
-          Announcing $10M seed funding from project mayhem ventures.{" "}
+          cddcdcdcdcdcdcdccdcdAnnouncing $10M seed funding from project mayhem ventures.{" "}
           <a href="#" className="transition duration-200 hover:underline">
             Read announcement
           </a>
@@ -91,7 +91,7 @@ function App() {
         "color: #22c55e; font-size: 18px; font-weight: bold;"
       );
       console.log(
-        "%cWishing you an amazing dev journey ahead — from all of us at Cookie Inc 🍪",
+        "%cWishing you an amazing dev journey ahead",
         "color: #3b82f6; font-size: 16px;"
       );
     };
@@ -105,7 +105,7 @@ function App() {
   return (
     <Router>
        <Snowfall
-        snowflakeCount={120}
+        snowflakeCount={75}
         style={{
           position: "fixed",
           width: "100vw",

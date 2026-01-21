@@ -41,7 +41,7 @@ export default function Loader() {
           transition={{ delay: 0.5, duration: 0.4 }}
           className="text-base md:text-xl text-gray-300 max-w-xl mx-auto"
         >
-          Please wait while we prepare something awesome for you 🍪
+          Please wait..
         </motion.p>
       </motion.div>
     </AuroraBackground>

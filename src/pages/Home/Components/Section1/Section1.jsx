@@ -21,8 +21,8 @@ export default function Section1({ content }) {
           transition={{ duration: 0.8, ease: [0.4, 0.0, 0.2, 1] }}
           className="text-3xl md:text-5xl font-bold leading-relaxed lg:leading-snug"
         >
-          Crafting experiences that feel real. Even when &nbsp;
-          <Highlight className="text-white ">Everything is unreal.</Highlight>
+          Embrace Your &nbsp;
+          <Highlight className="text-white ">Uniqueness.</Highlight>
         </motion.h1>
 
         <motion.p
@@ -31,7 +31,7 @@ export default function Section1({ content }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          A creative tech studio building immersive digital products with design and code.
+          A lesson without pain is meaningless. That’s because no one can gain without sacrificing something.
         </motion.p>
 
         <motion.div
@@ -40,12 +40,12 @@ export default function Section1({ content }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.5 }}
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+          {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             <HomeButton name={content.first_button} to="/portfolio" />
           </motion.div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             <HomeButton name={content.second_button} to="/contact-us" />
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </motion.div>
     </HeroHighlight>

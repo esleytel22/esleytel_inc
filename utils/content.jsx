@@ -20,10 +20,10 @@ export const homepage = {
           img:"./imgs/web-development-icon.svg"
       },
       {
-        title: "App Development",
+        title: "Document Mangment",
         content:
-          "Applications engineered to deliver seamless user experiences and drive measurable results.",
-          img:"./imgs/Mobile-dev.png"
+          "Organizing your documents, so your business can move faster.",
+          img:"./imgs/database_img.png"
       },
     ],
   },
@@ -776,7 +776,7 @@ export const portfoliopage = {
 };
 
 export const   navbar = {
-    title: ['Cookie Inc', '.'],
+    title: ['Esleytel Inc', '.'],
     pages: [
      {
         link:'/',
@@ -804,8 +804,8 @@ export const   navbar = {
 
 export const footer = {
   company: {
-    name: "Cookie Inc",
-    logo: "/imgs/cookie_white.png",
+    name: "Esleytel Inc",
+    logo: "/imgs/cookie_white.png", //change thing need an icon??
     highlight: ".",
     description: "By getting a quote, you agree to our Privacy Policy and consent to receive updates.",
     email_placeholder: "Your Email Here",
@@ -834,7 +834,7 @@ export const footer = {
     { name: "Privacy Policy", href: "#" },
     { name: "Terms of Service", href: "#" },
   ],
-  copyright: "© 2025 Cookie Inc.  All rights reserved."
+  copyright: "© 2026 Esleytel Inc.  All rights reserved."
 };
 
 

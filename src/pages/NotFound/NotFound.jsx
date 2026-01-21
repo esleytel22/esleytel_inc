@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 export default function NotFound() {
 
     useEffect(() => {
-    document.title = "Cookie Inc.  |  Not Found";
+    document.title = "Esleytel Inc.  |  Not Found";
   }, []);
 
 

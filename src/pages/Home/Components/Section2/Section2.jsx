@@ -176,7 +176,7 @@ export function IconCloudDemo() {
 export function OrbitingCirclesDemo() {
   return (
     <div className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden">
-      <OrbitingCircles iconSize={40} radius={250} speed={4}>
+      <OrbitingCircles iconSize={40} radius={200} speed={4}>
         <img src="/imgs/cookie_white.png" loading="lazy" alt="" />
         <Icons.notion />
         <Icons.openai />
@@ -184,7 +184,7 @@ export function OrbitingCirclesDemo() {
         <Icons.whatsapp />
       </OrbitingCircles>
       <IconCloudDemo />
-      <OrbitingCircles iconSize={30} radius={200} reverse speed={2}>
+      <OrbitingCircles iconSize={30} radius={170} reverse speed={2}>
         <Icons.whatsapp />
         <Icons.notion />
         <Icons.openai />

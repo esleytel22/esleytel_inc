@@ -26,7 +26,7 @@ export default function Home() {
   } = homepage;
 
   useEffect(() => {
-    document.title = "Cookie Inc.  |  Home";
+    document.title = "Esleytel Inc.  |  Home";
   }, []);
 
   return (
