@@ -74,7 +74,7 @@ export function ExpandableCardDemo({ cards }) {
                   loading="lazy"
                   src={active.src}
                   alt={
-                    "Cookie Inc – Creative tech studio building web, mobile, and branding solutions"
+                    "Esleytel Inc – Creative tech studio building web, mobile, and branding solutions"
                   }
                   className="w-full sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
@@ -139,7 +139,7 @@ export function ExpandableCardDemo({ cards }) {
                 src={card.src}
                 loading="lazy"
                 alt={
-                  "Cookie Inc – Creative tech studio building web, mobile, and branding solutions"
+                  "Esleytel Inc – Creative tech studio building web, mobile, and branding solutions"
                 }
                 className="w-full h-full rounded-lg object-contain object-top"
               />

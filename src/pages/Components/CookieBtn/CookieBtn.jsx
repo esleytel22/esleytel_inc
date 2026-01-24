@@ -1,7 +1,7 @@
 import React from 'react'
 import './CookieBtn.css'
 import { useNavigate } from 'react-router-dom';
-
+{/*Not being used*/}
 export default function CookieBtn({ name }) {
 
   const navigate = useNavigate();

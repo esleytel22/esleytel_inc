@@ -47,7 +47,7 @@ const teamMembers = [
 export default function Section5() {
   return (
     <div className="bg-black text-white py-16 md:px-section-lg px-section-sm">
-      <div className="text-center mb-14">
+      {/* <div className="text-center mb-14">
         <p className="text-sm uppercase text-gray-400">Meet</p>
         <h2 className="text-3xl sm:text-4xl font-semibold font-hahmlet">
           Our Team
@@ -75,7 +75,7 @@ export default function Section5() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

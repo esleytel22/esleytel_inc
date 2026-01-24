@@ -10,6 +10,7 @@ import LeftVisualSection from "./Components/LeftVisualSection";
 import emailjs from "emailjs-com";
 import { checkQuota } from "../../../utils/quotaProvider";
 import QuotaTimer from "./Components/QuotaTimer";
+import { AuroraText } from "@/components/magicui/aurora-text";
 
 const ContactUs = () => {
   const [step, setStep] = useState(1);
@@ -84,8 +85,8 @@ const ContactUs = () => {
     const userID = "Oht2VZndlktWjLOQT";
 
     const templateParams = {
-      from_name: "Cookie Inc. – Appointments",
-      from_email: "info@cookieinc.in",
+      from_name: "Esleytel Inc. – Appointments",
+      from_email: "Cristian@esleytel.space",
       name: formData.name,
       email: formData.email,
       phone: formData.phone,
@@ -115,7 +116,7 @@ const ContactUs = () => {
 
   useEffect(() => {
     setQuota(checkQuota("appointments", 3, 3));
-    document.title = "Cookie Inc.  |  Contact Us";
+    document.title = "Esleytel Inc.  |  Contact Us";
   }, []);
 
 
@@ -210,11 +211,14 @@ const ContactUs = () => {
         {/* Header */}
         <div className="text-center mb-12 relative">
           <div className="relative z-10">
-            <h1 className="text-4xl md:text-5xl font-mona-sans font-bold text-black mb-4 tracking-tight">
-              <SparklesText colors={{ first: "#fff3c4", second: "#c18b13" }}>
-                Drop us your need
-              </SparklesText>
-            </h1>
+             <h1 className="text-3xl md:text-6xl font-bold leading-tight">
+                    <AuroraText
+                      colors={["#fff3c4", "#c18b13", "#86602c", "#ffe29a", "#e0b352"]}
+                      className="inline"
+                    >
+                      Contact 
+                    </AuroraText>
+                  </h1>
             <p className="text-black/80 max-w-2xl mx-auto text-lg">
               Complete the form below to schedule your personalized session with
               our team.
@@ -819,9 +823,10 @@ const ContactUs = () => {
                     </div>
 
                     {/* Navigation Buttons */}
-                    <div className="mt-10 w-full flex flex-col md:flex-row items-center justify-between gap-4">
+                    {/* <div className="mt-10 w-full flex flex-col md:flex-row items-center justify-between gap-4">
                       {step > 1 ? (
                         <button
+                        
                           type="button"
                           onClick={prevStep}
                           className="w-full md:w-auto px-6 py-3 border border-black/20 text-black rounded-lg hover:bg-black/5 transition flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
@@ -847,14 +852,15 @@ const ContactUs = () => {
 
                       {step < steps.length ? (
                         <button
+                          disabled:pointer-events-none
                           type="submit"
                           className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-dark-cream to-light-cream text-[#fffff0] font-medium rounded-lg hover:from-light-cream/90 hover:to-[#c18b34]/90 transition shadow-md hover:shadow-lg flex items-center justify-center gap-2 disabled:opacity-50"
-                          disabled={
-                            !formData.name ||
-                            !formData.email ||
-                            !formData.phone ||
-                            (step === 2 && !formData.date)
-                          }
+                          // disabled={
+                          //   !formData.name ||
+                          //   !formData.email ||
+                          //   !formData.phone ||
+                          //   (step === 2 && !formData.date)
+                          // }
                         >
                           Continue
                           <svg
@@ -921,7 +927,7 @@ const ContactUs = () => {
                           )}
                         </button>
                       )}
-                    </div>
+                    </div> */}
                   </form>
                 )}
               </div>
@@ -930,21 +936,21 @@ const ContactUs = () => {
         </div>
 
         {/* Footer Note */}
-        <div className="text-center mt-8 text-black/60 text-sm">
+        {/* <div className="text-center mt-8 text-black/60 text-sm">
           <p>
             Have questions? Email us at{" "}
             <a
-              href={`mailto:info@cookieinc.in?subject=${encodeURIComponent(
+              href={`mailto:Cristian@Esleytel.space?subject=${encodeURIComponent(
                 "Project Inquiry"
               )}&body=${encodeURIComponent(
-                "Hello Cookie Inc,\n\nI have a project idea and would like to discuss further. Please get back to me.\n\nThanks!"
+                "Hello Esleytel Inc,\n\nI have a project idea and would like to discuss further. Please get back to me.\n\nThanks!"
               )}`}
               className="text-[#c18b34] hover:text-[#c18b34]/80 hover:underline"
             >
-              info@cookieinc.in
+              Crsitian@Esleytel.space
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
 
       <style jsx>{`

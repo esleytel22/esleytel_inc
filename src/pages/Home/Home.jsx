@@ -8,9 +8,9 @@ const Section2 = lazy(() => import("./Components/Section2/Section2"));
 const Section3 = lazy(() => import("./Components/Section3/Section3"));
 const Section4 = lazy(() => import("./Components/Section4/Section4"));
 // const Section5 = lazy(() => import("./Components/Section5/Section5")); // included even if not used
-const Section6 = lazy(() => import("./Components/Section6/Section6"));
-const Section7 = lazy(() => import("./Components/Section7/Section7"));
-const Section8 = lazy(() => import("./Components/Section8/Section8"));
+//const Section6 = lazy(() => import("./Components/Section6/Section6"));
+//const Section7 = lazy(() => import("./Components/Section7/Section7"));
+//const Section8 = lazy(() => import("./Components/Section8/Section8"));
 import { StickyBanner } from "@/components/ui/sticky-banner";
 
 export default function Home() {
@@ -52,17 +52,19 @@ export default function Home() {
         <Section5 content={section5} />
       </Suspense> */}
 
-      <Suspense fallback={<div>Loading Section 6...</div>}>
+      {/*This was not needed, could be used later*/ }
+      {/* <Suspense fallback={<div>Loading Section 6...</div>}>
         <Section6 content={section6} />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading Section 7...</div>}>
+      </Suspense> */}
+      
+      {/*This was not needed, could be used later*/ }
+      {/* <Suspense fallback={<div>Loading Section 7...</div>}>
         <Section7 content={section7} />
-      </Suspense>
+      </Suspense> */}
 
-      <Suspense fallback={<div>Loading Section 8...</div>}>
+      {/* <Suspense fallback={<div>Loading Section 8...</div>}>
         <Section8 content={section8} />
-      </Suspense>
+      </Suspense> */}
              {/* <StickyBanner hideOnScroll className="bg-black text-white">
         <p className="text-sm font-medium">
           <a href="https://forms.gle/q6oKGqRJbfwTmqZx9" target="_blank" rel="noopener noreferrer" className="underline">⚡️ Special Offer: Get 20% off your first project! 

@@ -40,8 +40,8 @@ const LeftVisualSection = ({ step, steps }) => {
             >
               {/* ✅ Avatar Image inside the draggable wrapper */}
               <motion.img
-                src="/imgs/cookie_logo_web.jpeg"
-                alt="Cookie Inc – Creative tech studio building web, mobile, and branding solutions"
+                src="/imgs/arrow.png"
+                alt="Esleytel Inc – Creative tech studio building web, mobile, and branding solutions"
                 className="object-contain"
                 width={150}
                 loading="lazy"

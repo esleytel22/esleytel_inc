@@ -94,7 +94,7 @@ useEffect(() => {
 
 
           <div className="hidden xl:block">
-            <CookieBtn name={"Get a Quote"} />
+            {/* <CookieBtn name={"Get a Quote"} /> */}
           </div>
         </div>
 
@@ -121,7 +121,7 @@ useEffect(() => {
       </NavLink>
     ))}
     <div className="pt-2">
-      <CookieBtn name={"Get a Quote"} />
+      {/* <CookieBtn name={"Get a Quote"} /> */}
     </div>
   </div>
 </div>

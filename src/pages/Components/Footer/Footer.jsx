@@ -10,9 +10,9 @@ function SpinningTextBasic() {
   return (
     <SpinningText
       className="md:text-3xl text-lg tracking-widest font-bold text-light-cream"
-      radius={6}
+      radius={5}
     >
-      Creativity • Care • Commitment •
+       Service • Care • Now •
     </SpinningText>
   );
 }
@@ -33,8 +33,8 @@ export default function Footer() {
     const userID = "Oht2VZndlktWjLOQT";
 
     const templateParams = {
-      from_name: "Cookie Inc. – Appointments",
-      from_email: "info@cookie.org.in",
+      from_name: "Elseytel Inc. – Appointments",
+      from_email: "Cristian@esleytel.space",
       email: mail,
     };
 
@@ -64,7 +64,7 @@ export default function Footer() {
   if (!quota) return null;
 
   return (
-    <footer className="bg-black text-white px-6 md:px-20 py-12 relative">
+    <footer className="bg-white text-white px-6 md:px-20 py-12 relative">
       <div className="absolute top-0 md:end-35 end-20">
         <SpinningTextBasic />
       </div>
@@ -73,15 +73,15 @@ export default function Footer() {
         {/* Left: Logo + Email */}
         <div className="flex-1 w-full">
           <div className="flex items-center mb-4">
-            <img
+            {/* <img
               src={footer.company.logo}
               loading="lazy"
-              alt="Cookie Inc – Creative tech studio building web, mobile, and branding solutions"
+              alt="Esleytel Inc – Creative tech studio building web, mobile, and branding solutions"
               className="h-8 w-8 mr-3"
-            />
-            <h2 className="text-2xl font-bold">
+            /> */}
+            <h2 className="text-2xl text-black font-bold">
               {footer.company.name}
-              <span className="text-light-cream ms-1">
+              <span className="text-light-cream ms-1 ">
                 {footer.company.highlight}
               </span>
             </h2>
@@ -131,13 +131,13 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 flex-1 mt-10 lg:mt-0">
+        <div className="grid text-black grid-cols-1 md:grid-cols-2 gap-8 flex-1 mt-10 lg:mt-0">
           <div>
             <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               {footer.quickLinks.map((link, i) => (
                 <li key={i}>
-                  <a href={link.href} className="hover:text-white">
+                  <a href={link.href} className="text-light-cream hover:text-black">
                     {link.name}
                   </a>
                 </li>
@@ -165,7 +165,7 @@ export default function Footer() {
                     href={"https://" + link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-white"
+                    className="text-light-cream hover:text-white"
                   >
                     {link.name}
                   </a>

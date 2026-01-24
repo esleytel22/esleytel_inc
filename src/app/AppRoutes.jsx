@@ -61,14 +61,14 @@ export default function AppRoutes() {
                 </MainLayout>
               }
             />
-            <Route
+            {/* <Route
               path="/service"
               element={
                 <MainLayout>
                   <Service />
                 </MainLayout>
               }
-            />
+            /> */}
             <Route
               path="/contact-us"
               element={

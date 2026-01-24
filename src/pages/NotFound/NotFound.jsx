@@ -34,7 +34,7 @@ export default function NotFound() {
 
         <p className="text-base md:text-xl text-gray-300 max-w-xl mx-auto">
           Oops! The page you're looking for doesn't exist. <br />
-          Maybe it got moved or never existed at all.
+          Maybe it got moved or we are working on updating our information.
         </p>
 
         <Link

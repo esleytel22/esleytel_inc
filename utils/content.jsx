@@ -9,9 +9,9 @@ export const homepage = {
     second_button: "Start Your Project",
   },
   section2: {
-    heading: "Solutions Built for Business Growth",
+    heading: "Solutions made for Business Growth",
     description:
-      "From modern websites to intelligent mobile apps, we help businesses scale with purpose-driven digital solutions.",
+      "We provide comprehensive document management and web development solutions for companies in need of streamlined workflows, secure data organization, and a strong digital presence.",
     feature_cards: [
       {
         title: "Web Development",
@@ -31,19 +31,19 @@ export const homepage = {
     heading: "Discover additional services that elevate your digital journey beyond expectations.",
     cards: [
       {
-        title: "Branding",
+        title: "Dell Service",
         description:
-          "Crafting unique brand identities that resonate with your audience and stand out in the market.",
+          "Providing end-user workstations outfitted with industry-leading, top-of-the-line equipment.",
       },
       {
-        title: "Digital Marketing",
+        title: "Document Management",
         description:
-          "Strategic marketing solutions that amplify your brand's reach and engagement across digital platforms.",
+          "SharePoint document support, including customized site development, API integration, and document indexing for improved organization and accessibility.",
       },
       {
-        title: "Tech Support",
+        title: "Web Design",
         description:
-          "Help with deploying React, Node, Firebase, etc., and fixing bugs for student or client projects.",
+          "Providing support for deploying React, Flutter, and JavaScript applications, along with domain acquisition to meet your company’s technical requirements.",
       },
     ],
   },
@@ -190,58 +190,53 @@ export const homepage = {
 
 export const aboutpage = {
   section1: {
-    title: ["The Team Turning Ideas into ", "Impact"], 
-    subtitle: "A bunch of creative minds stirring pixels, code, and caffeine to bring brands to life. Welcome to the COOKIE kitchen.",
+    title: ["Alone we go fast, together we go far ", "Impact"], 
+    subtitle: "A bunch of creative minds stirring pixels, code, and caffeine to bring brands to life. ",
  img: '/imgs/placeholder.png'
   },section2: {
-    title: 'Thats how our cookie made with love',
+    title: 'Sometimes the best way to solve your own problems is to help someone else.',
 items : [
   {
     title: "Chapter 1",
-    description: "The beginning of our story — where bold ideas met determination. This chapter marks our earliest steps, setting the foundation for everything that followed. From our first concept sketches to our initial small wins, every milestone here shaped our vision for the journey ahead.",
+    description: "Sometimes life is like this dark tunnel. You can't always see the light at the end of the tunnel, but if you just keep moving... you will come to a better place.-Uncle Iroh, Cristian",
     image: "https://images.unsplash.com/photo-1732310216648-603c0255c000?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     className: "absolute bottom-80 left-[20%] rotate-[-5deg]",
   },
   {
     title: "Chapter 2",
-    description: "A time of exploration and discovery. We refined our ideas, learned from early challenges, and began building meaningful connections. Each achievement in this stage was a stepping stone toward bigger goals, fueled by curiosity and persistence.",
+    description: "Nothing’s perfect, the world’s not perfect, but it’s there for us, trying the best it can. That’s what makes it so damn beautiful.”—Roy Mustang, Cristian",
     image: "https://images.unsplash.com/photo-1697909623564-3dae17f6c20b?q=80&w=2667&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     className: "absolute top-40 left-[25%] rotate-[-7deg]",
   },
   {
     title: "Chapter 3",
-    description: "The momentum built stronger. We began turning concepts into tangible results, celebrated key achievements, and gained confidence in our direction. This chapter reflects a period of growth, resilience, and newfound clarity.",
+    description: "My drill is the drill, that creates the HEAVENS! - Simon, Esmailyn",
     image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=2600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     className: "absolute top-5 left-[40%] rotate-[8deg]",
   },
   {
     title: "Chapter 4",
-    description: "A defining stage in our journey. Here, we embraced larger challenges, pushed creative boundaries, and laid the groundwork for long-term impact. It was a time of bold moves and strategic growth.",
+    description: "if you don't like the hand that fate's dealt you with, fight for a new one - Naruto, Maxx ",
     image: "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=3648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     className: "absolute top-32 left-[55%] rotate-[10deg]",
   },
   {
     title: "Chapter 5",
-    description: "We stepped into a phase of refinement and excellence. This chapter captures the moments where attention to detail, quality, and innovation became central to our mission — shaping our identity and influence.",
+    description: "I want to live - Robin, Annette",
     image: "https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     className: "absolute top-20 right-[35%] rotate-[2deg]",
   },
   {
     title: "Chapter 6",
-    description: "Innovation reached new heights. We launched ambitious projects, collaborated with inspiring partners, and expanded our reach. This was a time when ideas turned into impactful realities.",
+    description: "Knowing what it feels to be in pain, is exactly why we try to be kind to others. - Jaraiya",
     image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     className: "absolute top-24 left-[45%] rotate-[-7deg]",
   },
-  {
-    title: "Chapter 7",
-    description: "The present — a chapter of reflection and vision. We celebrate how far we've come while looking ahead to the exciting possibilities on the horizon. The journey continues, stronger than ever.",
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    className: "absolute top-8 left-[30%] rotate-[4deg]",
-  },
+,
 ]
 ,
   }, section3: {
-    title: "Who Are We ?",
+    title: "Humble Beginning",
     
     tagline: "At Cookie, we don’t just build—we build right",
     items: [
@@ -272,7 +267,7 @@ items : [
   },
 ]
   }, section4: {
-    hypertext: 'We Know What It Means To Start From Zero',
+    hypertext: 'If you don’t know where you are, you’re at the beginning.',
     fliptext: '~ Built By Founders, For Founders ~'
   }
 };
@@ -600,7 +595,7 @@ export const servicespage = {
 
 export const portfoliopage = {
   section1: {
-    title: ["Our portfolio isn’t a ", "Gallery ", "But Stories of", "Entrepreneurs"],
+    title: ["We focus on ", "Goals ", "that help shape our", "Message"],
     subtitle: "Not Just Pretty Pixels. Purposeful, Powerful Products",
   },
   section2: {
@@ -677,97 +672,98 @@ export const portfoliopage = {
     button: "Let’s Bake Something Together",
   },
   section4: {
-    title: "Project Case Studies",
+    title: "Projects",
     cards: [
       
       {
-        title: "IQ Bridge – An Edu Tech Portfolio Website",
+        title: "Restaurant Templet – React JS based ",
         description:
-          "A sleek portfolio website for an emerging edtech company, IQ Bridge. Showcases their offerings in AI-based assessments and learning tools.",
-        src: "https://res.cloudinary.com/dh8zo1lan/image/upload/q_auto,f_auto/v1753423538/iqbridge_cs_bubzkk.jpg",
+          "A design meant for a restaurant that needs a sleek, modern look with a simple layout anyone will love.",
+        src: "/imgs/Restaurant_Templet.png",
         ctaText: "View Case Study",
         ctaLink: "/case-studies/iq-bridge",
         content: () => {
           return (
             <p>
 
-              <br /> <strong>Project Type:</strong> Portfolio Website
+              <br /> <strong>Project Type:</strong> Restaurant Website
               <br />
+              <br /> <strong>Link:</strong> <a class="bg-yellow-200 px-1 rounded" href="https://esleytel.dev" target="_blank"> https://esleytel.dev </a>
               <br />
-               IQ Bridge partnered with us to build a modern portfolio website that showcases their edtech offerings. The site highlights their student-focused courses, learning approach, and growing impact in the education space.
+               A design meant for a restaurant that needs a sleek, modern look with a simple layout anyone will love.
             </p>
           );
         },
       },
-      {
-        title: "Audnex – Portfolio Website for Creative Agency",
-        description:
-          "Portfolio website for Audnex with motion visuals and interactive case studies. Built to elevate their presence in the competitive creative industry.",
-        src: "https://res.cloudinary.com/dh8zo1lan/image/upload/q_auto,f_auto/v1753423530/audnex_website_kr9xn2.jpg",
-        ctaText: "View Case Study",
-        ctaLink: "https://res.cloudinary.com/dh8zo1lan/image/upload/q_auto,f_auto/v1753423530/audnex_website_kr9xn2.jpg",
-        content: () => {
-          return (
-            <p>
-              <br /> <strong>Duration:</strong> March 2025 – April 2025
-              <br /> <strong>Project Type:</strong> Portfolio Website
-              <br />
-              <br />
-               Audnex needed a striking digital presence to showcase their
-              creative work. We built an immersive portfolio with
-              scroll-triggered animations, video backgrounds, and CMS-driven
-              case study management. The site improved client conversion rates
-              and helped the team pitch better to international clients.
-            </p>
-          );
-        },
-      },{
-        title: "SAP Checklist Portal",
-        description:
-          "A centralized checklist platform for SAP consultants to manage tasks across project phases. Simplifies tracking during config, testing, deployment, and go-live.",
-        src: "https://res.cloudinary.com/dh8zo1lan/image/upload/q_auto,f_auto/v1753423541/sap_checklist_jzbsbf.jpg",
-        ctaText: "View Case Study",
-        ctaLink: "/case-studies/sap-checklist-portal",
-        content: () => {
-          return (
-            <p>
+      // {
+      //   title: "Audnex – Portfolio Website for Creative Agency",
+      //   description:
+      //     "Portfolio website for Audnex with motion visuals and interactive case studies. Built to elevate their presence in the competitive creative industry.",
+      //   src: "https://res.cloudinary.com/dh8zo1lan/image/upload/q_auto,f_auto/v1753423530/audnex_website_kr9xn2.jpg",
+      //   ctaText: "View Case Study",
+      //   ctaLink: "https://res.cloudinary.com/dh8zo1lan/image/upload/q_auto,f_auto/v1753423530/audnex_website_kr9xn2.jpg",
+      //   content: () => {
+      //     return (
+      //       <p>
+      //         <br /> <strong>Duration:</strong> March 2025 – April 2025
+      //         <br /> <strong>Project Type:</strong> Portfolio Website
+      //         <br />
+      //         <br />
+      //          Audnex needed a striking digital presence to showcase their
+      //         creative work. We built an immersive portfolio with
+      //         scroll-triggered animations, video backgrounds, and CMS-driven
+      //         case study management. The site improved client conversion rates
+      //         and helped the team pitch better to international clients.
+      //       </p>
+      //     );
+      //   },
+      // },{
+      //   title: "SAP Checklist Portal",
+      //   description:
+      //     "A centralized checklist platform for SAP consultants to manage tasks across project phases. Simplifies tracking during config, testing, deployment, and go-live.",
+      //   src: "https://res.cloudinary.com/dh8zo1lan/image/upload/q_auto,f_auto/v1753423541/sap_checklist_jzbsbf.jpg",
+      //   ctaText: "View Case Study",
+      //   ctaLink: "/case-studies/sap-checklist-portal",
+      //   content: () => {
+      //     return (
+      //       <p>
               
-              <br /> <strong>Project Type:</strong> Web App – Checklist
-              Management
+      //         <br /> <strong>Project Type:</strong> Web App – Checklist
+      //         Management
             
-              <br />
-              <br />
-              SAP implementations are often complex and involve multiple
-              checkpoints across modules. Our client wanted a centralized
-              web-based SAP Checklist Portal to track, manage, and verify
-              essential steps during project phases like configuration, testing,
-              deployment, and post-go-live support. 
-            </p>
-          );
-        },
-      },
-      {
-        title: "Torque Toyzz — E-Commerce Website",
-        description:
-          " Torque toyzz is a leading retailer of remote-controlled cars and drones in the Chennai",
-        src: "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763730491/Torque_Toyzz_1_1_ulc32t.png",
-        ctaText: "View Case Study",
-        ctaLink: "/case-studies/vd-granite",
-        content: () => {
-          return (
-            <p>
+      //         <br />
+      //         <br />
+      //         SAP implementations are often complex and involve multiple
+      //         checkpoints across modules. Our client wanted a centralized
+      //         web-based SAP Checklist Portal to track, manage, and verify
+      //         essential steps during project phases like configuration, testing,
+      //         deployment, and post-go-live support. 
+      //       </p>
+      //     );
+      //   },
+      // },
+      // {
+      //   title: "Torque Toyzz — E-Commerce Website",
+      //   description:
+      //     " Torque toyzz is a leading retailer of remote-controlled cars and drones in the Chennai",
+      //   src: "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763730491/Torque_Toyzz_1_1_ulc32t.png",
+      //   ctaText: "View Case Study",
+      //   ctaLink: "/case-studies/vd-granite",
+      //   content: () => {
+      //     return (
+      //       <p>
 
-              <br /> <strong>Project Type:</strong> E-Commerce Website
-              <br />
-              <br />
-              Torque toyzz is a leading retailer of remote-controlled cars and
-              drones in the Chennai. They wanted to expand their reach by launching
-              an e-commerce website that could showcase their extensive product
-              range and facilitate online sales. and Seamless Whatsapp Integration.
-            </p>
-          );
-        },
-      },
+      //         <br /> <strong>Project Type:</strong> E-Commerce Website
+      //         <br />
+      //         <br />
+      //         Torque toyzz is a leading retailer of remote-controlled cars and
+      //         drones in the Chennai. They wanted to expand their reach by launching
+      //         an e-commerce website that could showcase their extensive product
+      //         range and facilitate online sales. and Seamless Whatsapp Integration.
+      //       </p>
+      //     );
+      //   },
+      // },
     ],
    
   },
@@ -805,7 +801,7 @@ export const   navbar = {
 export const footer = {
   company: {
     name: "Esleytel Inc",
-    logo: "/imgs/cookie_white.png", //change thing need an icon??
+    logo: "/imgs/arrow.png", //change thing need an icon??
     highlight: ".",
     description: "By getting a quote, you agree to our Privacy Policy and consent to receive updates.",
     email_placeholder: "Your Email Here",

@@ -176,15 +176,16 @@ export function IconCloudDemo() {
 export function OrbitingCirclesDemo() {
   return (
     <div className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden">
-      <OrbitingCircles iconSize={40} radius={200} speed={4}>
+      <OrbitingCircles iconSize={40} radius={210} speed={2}>
         <img src="/imgs/cookie_white.png" loading="lazy" alt="" />
         <Icons.notion />
         <Icons.openai />
         <Icons.googleDrive />
+        <Icons.gitHub />
         <Icons.whatsapp />
       </OrbitingCircles>
       <IconCloudDemo />
-      <OrbitingCircles iconSize={30} radius={170} reverse speed={2}>
+      <OrbitingCircles iconSize={30} radius={170} reverse speed={1}>
         <Icons.whatsapp />
         <Icons.notion />
         <Icons.openai />
@@ -198,7 +199,7 @@ export default function Section2({content}) {
   return (
     <div className="bg-white text-black">
       <div className="max-w-screen md:px-section-lg px-section-sm py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div className="flex flex-col justify-center order-2 lg:order-1">
+        <div className="flex flex-col justify-center order-2 lg:order-2">
           <div className="max-w-xl">
             <h3 className="font-hahmlet text-3xl sm:text-4xl md:text-5xl font-medium leading-tight">
               {content.heading}
@@ -208,7 +209,7 @@ export default function Section2({content}) {
             </p>
           </div>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-6">
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
             {content.feature_cards.map((card, idx) => {
               return (
                 <FeatureCard
@@ -222,7 +223,7 @@ export default function Section2({content}) {
           </div>
         </div>
 
-        <div className="flex justify-center items-center order-1 hidden md:block lg:order-2">
+        <div className="flex justify-center items-center order-1 hidden md:block lg:order-1">
           <OrbitingCirclesDemo />
         </div>
       </div>

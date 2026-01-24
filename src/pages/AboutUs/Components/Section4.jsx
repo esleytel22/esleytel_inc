@@ -10,12 +10,12 @@ const Section4 = ({content}) => {
       <MaskContainer
         revealText={
           <p className="mx-auto max-w-4xl text-center text-4xl font-bold text-slate-800 dark:text-white">
-            We know what it means to start from  <span className="text-light-cream">zero</span> — no investors, no roadmap, just belief and grit. That’s how <span className="text-light-cream">Cookie Inc</span> began. We’ve built, failed, rebuilt, and grown. Every line of code and design comes from that journey. We don’t just get <span className="text-light-cream">founders</span> — we are <span className="text-light-cream">founders</span>.
+            Starting from the beginning is never a setback. <span className="text-light-cream">Beginning</span> represents understanding where to start. At <span className="text-light-cream">Esleytel Inc.</span>, we focus on learning, growing, and tackling challenges we may not have anticipated along the way.
           </p>
         }
         className="h-[40rem] rounded-md  text-white dark:text-black"
       >
-Built by <span className="text-light-cream">founders</span>, for founders.
+Forged through <span className="text-light-cream">experience</span>
       </MaskContainer>
 
          
