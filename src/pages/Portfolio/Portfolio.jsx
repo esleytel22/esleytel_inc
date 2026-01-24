@@ -8,7 +8,10 @@ const Section1 = lazy(() => import("./Components/Section1"));
 const Section4 = lazy(() => import("./Components/Section4"));
 
 export default function Portfolio() {
-  const { section1, section2, section3, section4 } = portfoliopage;
+  const { section1, 
+    section2, 
+    section3, 
+    section4 } = portfoliopage;
 
   useEffect(() => {
     document.title = "Esleytel Inc.  |  Portfolio";

@@ -34,7 +34,7 @@ export default function AppRoutes() {
       <Routes>
         {isBeforeLaunch ? (
           // Show only countdown if before launch
-          <Route path="*" element={<LaunchCountdown />} />
+          <Route path="*" element={<Home />} />//<Route path="*" element={<LaunchCountdown />} />
         ) : (
           <>
             <Route

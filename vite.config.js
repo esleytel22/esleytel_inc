@@ -8,10 +8,17 @@ import { visualizer } from "rollup-plugin-visualizer";
 
 
 export default defineConfig({
-  plugins: [react(), tailwindcss(),viteCompression({
-  algorithm: 'brotliCompress',
-  ext: '.br',
-}), visualizer({open: true})],
+  base: '/esleytel_inc',
+
+  plugins: [
+    react(),
+     tailwindcss(),
+  // ),viteCompression({
+  //algorithm: 'brotliCompress',
+  //ext: '.br',
+//}), 
+
+visualizer({open: true})],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
