@@ -20,7 +20,7 @@ export const homepage = {
           img:"./imgs/web-development-icon.svg"
       },
       {
-        title: "Document Mangment",
+        title: "Document Management",
         content:
           "Organizing your documents, so your business can move faster.",
           img:"./imgs/database_img.png"
@@ -31,7 +31,7 @@ export const homepage = {
     heading: "Discover additional services that elevate your digital journey beyond expectations.",
     cards: [
       {
-        title: "Dell Service",
+        title: "Tech Service",
         description:
           "Providing end-user workstations outfitted with industry-leading, top-of-the-line equipment.",
       },
@@ -59,8 +59,8 @@ export const homepage = {
       },
       {
         title:
-          "Building with precision.",
-        desc: "we develop reliable applications that perform across devices and platforms.",
+          "Building with precision",
+        desc: "We develop reliable applications that perform across devices and platforms.",
         label: "Develop",
       },
       {
@@ -96,7 +96,7 @@ export const homepage = {
       {
         name: "Srinivas P",
         username: "@jane",
-        body: " good work and affordable price.",
+        body: "Good work and affordable price.",
         img: "/imgs/V&D-logo.png",
       },
       {
@@ -676,7 +676,7 @@ export const portfoliopage = {
     cards: [
       
       {
-        title: "Restaurant Templet – React JS based ",
+        title: "Restaurant Template – React JS based ",
         description:
           "A design meant for a restaurant that needs a sleek, modern look with a simple layout anyone will love.",
         src: "/imgs/Restaurant_Templet.png",
@@ -804,14 +804,14 @@ export const footer = {
     logo: "/imgs/arrow.png", //change thing need an icon??
     highlight: ".",
     description: "By getting a quote, you agree to our Privacy Policy and consent to receive updates.",
-    email_placeholder: "Your Email Here",
+    email_placeholder: "Email us at helpdesk@esleytel.space",
     email_button: "Get a Quote"
   },
   quickLinks: [
-    { name: "Home", href: "#" },
-    { name: "About Us", href: "#" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about-us" },
     { name: "Services", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "Contact Us", href: "/contact-us" },
   ],
   resources: [
     { name: "Help Center", href: "#" },
@@ -835,9 +835,9 @@ export const footer = {
 
 
 export const social_links = {
-  whatsapp: 'https://wa.cookie.org.in',
+  whatsapp: '#',
   instagram: 'https://instagram.cookie.org.in',
   linkedin: 'https://linkedin.cookie.org.in',
   twitter: 'https://twitter.cookie.org.in',
-  gmb: 'https://gmb.cookie.org.in'
+  gmb: '#'
 }
