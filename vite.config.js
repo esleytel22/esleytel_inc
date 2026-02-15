@@ -8,7 +8,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 
 
 export default defineConfig({
-  base: '/esleytel_inc',
+  base: '/',
 
   plugins: [
     react(),
