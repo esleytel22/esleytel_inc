@@ -656,7 +656,7 @@ export const portfoliopage = {
   title: "NJ Beach Body Championship – Event Registration Portal",
   description:
     "Complete event management platform with Stripe payment integration, competitor registration, and live leaderboards.",
-  src: "./imgs/NJBBC_Event_Mockup.png",
+  src: "/imgs/NJBBC_Event_Mockup.png",
   ctaText: "View Case Study",
   ctaLink: "https://esleytel22.github.io/Beach_Body_NJ/",
   content: () => {
@@ -683,7 +683,7 @@ export const portfoliopage = {
   title: "Enterprise Document Hub – SharePoint Reimagined",
   description:
     "Centralized document management system with role-based access control, version tracking, and advanced search capabilities.",
-  src: "./imgs/Document_Management_Mockup.png",
+  src: "/imgs/Document_Management_Mockup.png",
   ctaText: "View Case Study",
   ctaLink: "/case-studies/document-management",
   content: () => {
