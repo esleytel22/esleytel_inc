@@ -635,7 +635,7 @@ export const portfoliopage = {
   title: "Gourmet Dining Experience – Modern Restaurant Platform",
   description:
     "Full-stack restaurant website featuring online reservations, interactive menu with dietary filters, and seamless table booking.",
-  src: "public/imgs/Restaurant_Templet.png",
+  src: "/imgs/Restaurant_Templet.png",
   ctaText: "View Live Site",
   ctaLink: "https://esleytel.dev",
   content: () => {
