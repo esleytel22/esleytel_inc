@@ -83,7 +83,7 @@ export default function AppRoutes() {
                 </MainLayout>
               }
             />
-            <Route path="*" element={<NotFoundPage />} />
+            <Route path="*" element={<Home />} />
             
           </>
         )}

@@ -8,7 +8,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  base: '/',
+  base: '/', // ','
 
   plugins: [
     react(),
@@ -22,7 +22,7 @@ export default defineConfig({
         theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
-        start_url: '/',
+        start_url: '/',//start_url: '/',
         icons: [
           {
             src: 'icon-192x192.png',
