@@ -1,1 +1,0 @@
-import{b as i,g as n}from"./index-D6y0tgKD.js";import{a as r}from"./use-combine-values-DxP4hbiM.js";function c(t,e,o){i.useInsertionEffect(()=>t.on(e,o),[t,e,o])}function f(t){const e=r(t.getVelocity()),o=()=>{const s=t.getVelocity();e.set(s),s&&n.update(o)};return c(t,"change",()=>{n.update(o,!1,!0)}),e}export{f as u};
