@@ -92,7 +92,7 @@ body, html, #root {
 
 html {
     background-color: white;
-    color: black
+    color: black;
 }
 
 @theme inline {
@@ -194,6 +194,18 @@ html {
   100% {
     background-position: 0% 50%;
     transform: rotate(-5deg) scale(0.9);
+
+        }
+
+    }
+  --animate-gradient-shift: gradient-shift 3s ease-in-out infinite;
+  @keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+
+        }
+  50% {
+    background-position: 100% 50%;
 
         }
 

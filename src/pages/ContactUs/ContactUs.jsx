@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { SparklesText } from "@/components/magicui/sparkles-text";
 import { BackgroundLines } from "@/components/ui/background-lines";
@@ -10,9 +10,9 @@ import LeftVisualSection from "./Components/LeftVisualSection";
 import emailjs from "emailjs-com";
 import { checkQuota } from "../../../utils/quotaProvider";
 import QuotaTimer from "./Components/QuotaTimer";
-import { AuroraText } from "@/components/magicui/aurora-text";
 
 const ContactUs = () => {
+  const dateInputRef = useRef(null);
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: "",
@@ -92,7 +92,7 @@ const ContactUs = () => {
   }
 
     const templateParams = {
-      from_name: "Esleytel Inc. – Appointments",
+      from_name: "Esleytel LLC. – Appointments",
       from_email: "cristian@esleytel.space",
       to_email: "helpdesk@esleytel.space, cristian@esleytel.space",
       name: formData.name,
@@ -123,7 +123,6 @@ const ContactUs = () => {
 
   useEffect(() => {
     setQuota(checkQuota("appointments", 3, 3));
-    document.title = "Esleytel Inc.  |  Contact Us";
   }, []);
 
 
@@ -142,10 +141,10 @@ const ContactUs = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-user-round-pen-icon lucide-user-round-pen"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-user-round-pen-icon lucide-user-round-pen"
         >
           <path d="M2 21a8 8 0 0 1 10.821-7.487" />
           <path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
@@ -165,10 +164,10 @@ const ContactUs = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-calendar-days-icon lucide-calendar-days"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-calendar-days-icon lucide-calendar-days"
         >
           <path d="M8 2v4" />
           <path d="M16 2v4" />
@@ -195,10 +194,10 @@ const ContactUs = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-check-check-icon lucide-check-check"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-check-check-icon lucide-check-check"
         >
           <path d="M18 6 7 17l-5-5" />
           <path d="m22 10-7.5 7.5L13 16" />
@@ -211,30 +210,12 @@ const ContactUs = () => {
 
   return (
     <section
-      className="h-full pt-30 flex flex-col justify-center items-center  p-4 md:p-8 lg:mt-20"
+      className="flex flex-col"
       aria-label="Contact section"
     >
-      <div className="w-full max-w-5xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12 relative">
-          <div className="relative z-10">
-             <h1 className="text-3xl md:text-6xl font-bold leading-tight">
-                    <AuroraText
-                      colors={["#fff3c4", "#c18b13", "#86602c", "#ffe29a", "#e0b352"]}
-                      className="inline"
-                    >
-                      Contact 
-                    </AuroraText>
-                  </h1>
-            <p className="text-black/80 max-w-2xl mx-auto text-lg">
-              Complete the form below to schedule your personalized session with
-              our team.
-            </p>
-          </div>
-        </div>
-
+      <div className="w-full">
         {/* Main Card */}
-        <div className=" rounded-2xl shadow-xl overflow-hidden transform transition-all hover:shadow-2xl border border-/10">
+        <div className="overflow-hidden">
           <div className="flex flex-col md:flex-row">
             {/* Left side - Visual */}
             <LeftVisualSection step={step} steps={steps} />
@@ -382,7 +363,6 @@ const ContactUs = () => {
                                     validateField(e.target.name, e.target.value)
                                   }
                                   className="w-full px-4 py-3 bg-[#fffff0] border border-black/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c18b34] focus:border-[#c18b34] transition font-medium pl-12 shadow-sm"
-                                  autoFocus
                                 />
 
                                 <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black/40">
@@ -556,21 +536,25 @@ const ContactUs = () => {
                               </label>
                               <div className="relative">
                                 <input
+                                  ref={dateInputRef}
                                   type="date"
                                   id="date"
                                   name="date"
                                   value={formData.date}
                                   onChange={handleChange}
+                                  onClick={(e) => e.target.showPicker?.()}
                                   required
                                   onBlur={(e) =>
                                     validateField(e.target.name, e.target.value)
                                   }
                                   aria-required="true"
                                   min={new Date().toISOString().split("T")[0]}
-                                  className="w-full px-4 py-3 bg-[#fffff0] border border-black/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c18b34] focus:border-[#c18b34] transition text-black pl-12 shadow-sm"
-                                  autoFocus
+                                  className="w-full px-4 py-3 bg-[#fffff0] border border-black/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c18b34] focus:border-[#c18b34] transition text-black pl-12 shadow-sm cursor-pointer"
                                 />
-                                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black/40">
+                                <div
+                                  onClick={() => dateInputRef.current?.showPicker?.()}
+                                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black/40 cursor-pointer"
+                                >
                                   <svg
                                     className="w-6 h-6"
                                     fill="none"
@@ -862,7 +846,6 @@ const ContactUs = () => {
 
                       {step < steps.length ? (
                         <button
-                          disabled:pointer-events-none
                           type="submit"
                           className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-dark-cream to-light-cream text-[#fffff0] font-medium rounded-lg hover:from-light-cream/90 hover:to-[#c18b34]/90 transition shadow-md hover:shadow-lg flex items-center justify-center gap-2 disabled:opacity-50"
                           // disabled={
@@ -946,14 +929,14 @@ const ContactUs = () => {
         </div>
 
         {/* Footer Note */}
-        <div className="text-center mt-8 text-black/60 text-sm">
+        <div className="text-center py-8 px-4 text-black/60 text-sm">
           <p>
             Have questions? Email us at{" "}
             <a
               href={`mailto:helpdesk@Esleytel.space?subject=${encodeURIComponent(
                 "Project Inquiry"
               )}&body=${encodeURIComponent(
-                "Hello Esleytel Inc,\n\nI have a project idea and would like to discuss further. Please get back to me.\n\nThanks!"
+                "Hello Esleytel LLC,\n\nI have a project idea and would like to discuss further. Please get back to me.\n\nThanks!"
               )}`}
               className="text-[#c18b34] hover:text-[#c18b34]/80 hover:underline"
             >
@@ -963,18 +946,7 @@ const ContactUs = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes orbit {
-          from {
-            transform: translate(-50%, -50%) rotate(0deg) translateX(110px)
-              rotate(0deg);
-          }
-          to {
-            transform: translate(-50%, -50%) rotate(360deg) translateX(110px)
-              rotate(-360deg);
-          }
-        }
-
+      <style>{`
         @keyframes fadeIn {
           from {
             opacity: 0;
@@ -988,35 +960,8 @@ const ContactUs = () => {
           }
         }
 
-        @keyframes blob {
-          0% {
-            transform: translate(0px, 0px) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-          100% {
-            transform: translate(0px, 0px) scale(1);
-          }
-        }
-
         .animate-fadeIn {
           animation: fadeIn 0.3s ease-in-out;
-        }
-
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-
-        .animation-delay-4000 {
-          animation-delay: 4s;
         }
       `}</style>
     </section>

@@ -1,5 +1,6 @@
 import React from "react";
 import { footer } from "../../../../utils/content";
+import { scrollToHash } from "@/lib/scrollToHash";
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
             <img
               src={footer.company.logo}
               loading="lazy"
-              alt="Esleytel Inc – Creative tech studio building web, mobile, and branding solutions"
+              alt="Esleytel LLC – Creative tech studio building web, mobile, and branding solutions"
               className="h-8 w-8 mr-3"
             />
             <h2 className="text-2xl text-black font-bold">
@@ -34,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-300">
               {footer.quickLinks.map((link, i) => (
                 <li key={i}>
-                  <a href={link.href} className="text-light-cream hover:text-black">
+                  <a href={link.href} onClick={(e) => scrollToHash(e, link.href)} className="text-light-cream hover:text-black">
                     {link.name}
                   </a>
                 </li>

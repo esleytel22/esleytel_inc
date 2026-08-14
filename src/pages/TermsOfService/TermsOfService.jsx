@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 export default function TermsOfService() {
   useEffect(() => {
-    document.title = "Terms of Service | Esleytel Inc.";
+    document.title = "Terms of Service | Esleytel LLC.";
     window.scrollTo(0, 0);
   }, []);
 
@@ -25,7 +25,7 @@ export default function TermsOfService() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Agreement to Terms</h2>
             <p className="text-gray-700 leading-relaxed">
-              By accessing or using the services provided by Esleytel Inc. ("Company," "we," "our," or "us"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you may not access our services.
+              By accessing or using the services provided by Esleytel LLC. ("Company," "we," "our," or "us"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you may not access our services.
             </p>
             <p className="text-gray-700 leading-relaxed mt-4">
               We reserve the right to modify these Terms at any time. Continued use of our services after changes constitutes acceptance of the modified Terms.
@@ -35,7 +35,7 @@ export default function TermsOfService() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Services Description</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Esleytel Inc. provides digital solutions including but not limited to:
+              Esleytel LLC. provides digital solutions including but not limited to:
             </p>
             <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
               <li>Web development and design services</li>
@@ -179,7 +179,7 @@ export default function TermsOfService() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Indemnification</h2>
             <p className="text-gray-700 leading-relaxed">
-              You agree to indemnify and hold harmless Esleytel Inc. from any claims, damages, or expenses arising from your use of our services, violation of these Terms, or infringement of any third-party rights through materials you provide.
+              You agree to indemnify and hold harmless Esleytel LLC. from any claims, damages, or expenses arising from your use of our services, violation of these Terms, or infringement of any third-party rights through materials you provide.
             </p>
           </section>
 
@@ -221,7 +221,7 @@ export default function TermsOfService() {
             
             <h3 className="text-xl font-semibold text-gray-900 mb-3 mt-6">14.1 Entire Agreement</h3>
             <p className="text-gray-700 leading-relaxed">
-              These Terms, together with any project-specific agreements, constitute the entire agreement between you and Esleytel Inc.
+              These Terms, together with any project-specific agreements, constitute the entire agreement between you and Esleytel LLC.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-900 mb-3 mt-6">14.2 Severability</h3>
@@ -246,7 +246,7 @@ export default function TermsOfService() {
               If you have any questions about these Terms of Service, please contact us:
             </p>
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <p className="text-gray-900 font-semibold mb-2">Esleytel Inc.</p>
+              <p className="text-gray-900 font-semibold mb-2">Esleytel LLC.</p>
               <p className="text-gray-700">Email: <a href="mailto:helpdesk@esleytel.space" className="text-amber-600 hover:underline">helpdesk@esleytel.space</a></p>
               <p className="text-gray-700">Support Page: <a href="/contact-us" className="text-amber-600 hover:underline">Contact Us</a></p>
             </div>

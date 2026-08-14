@@ -7,10 +7,16 @@ import {
   FileX as IconFileBroken,
   Signature as IconSignature,
   Columns as IconTableColumn,
+  Smartphone as IconSmartphone,
 } from "lucide-react";
 
 import { motion } from "framer-motion";
 
+const shiftingGradient = {
+  backgroundImage:
+    "linear-gradient(90deg, #ec4899, #a855f7, #6366f1, #a855f7, #ec4899)",
+  backgroundSize: "300% auto",
+};
 
 export function BentoGridThirdDemo() {
   return (
@@ -58,104 +64,129 @@ const SkeletonOne = () => {
     <motion.div
       initial="initial"
       whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2">
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2] flex-col space-y-2">
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white dark:bg-black">
+        className="flex flex-row rounded-full border border-white/20 backdrop-blur-sm p-2  items-center space-x-2 bg-white/10">
         <div
-          className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
-        <div className="w-full bg-pink-500 h-5 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full dark:bg-purple-900" />
+          className="h-6 w-6 rounded-full shrink-0 animate-gradient-shift"
+          style={shiftingGradient} />
+        <div
+          className="w-full h-5 rounded-full animate-gradient-shift"
+          style={shiftingGradient} />
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-white dark:bg-black">
-        <div className="w-full bg-violet-500 h-5 bg-gradient-to-r from-violet-500 to-purple-500  rounded-full dark:bg-violet-900" />
+        className="flex flex-row rounded-full border border-white/20 backdrop-blur-sm p-2 items-center space-x-2 w-3/4 ml-auto bg-white/10">
         <div
-          className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
+          className="w-full h-5 rounded-full animate-gradient-shift"
+          style={shiftingGradient} />
+        <div
+          className="h-6 w-6 rounded-full shrink-0 animate-gradient-shift"
+          style={shiftingGradient} />
       </motion.div>
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-white dark:bg-black ">
+        className="flex flex-row rounded-full border border-white/20 backdrop-blur-sm p-2 items-center space-x-2 bg-white/10 ">
         <div
-          className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
-        <div className="w-full bg-purple-500 h-5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full dark:bg-purple-900" />
+          className="h-6 w-6 rounded-full shrink-0 animate-gradient-shift"
+          style={shiftingGradient} />
+        <div
+          className="w-full h-5 rounded-full animate-gradient-shift"
+          style={shiftingGradient} />
       </motion.div>
     </motion.div>
   );
 };
 
 const SkeletonFour = () => {
-  const first = {
-    initial: {
-      x: 20,
-      rotate: -5,
+  const opinions = [
+    {
+      text: "Just code in Vanilla Javascript",
+      tag: "Delusional",
+      tagClass: "bg-red-500/20 text-red-50 border-red-200/40",
     },
-    hover: {
-      x: 0,
-      rotate: 0,
+    {
+      text: "Tailwind CSS is cool, you know",
+      tag: "Sensible",
+      tagClass: "bg-green-500/20 text-green-50 border-green-200/40",
+    },
+    {
+      text: "I love angular, RSC, and Redux.",
+      tag: "Helpless",
+      tagClass: "bg-orange-500/20 text-orange-50 border-orange-200/40",
+    },
+  ];
+
+  const container = {
+    initial: {},
+    animate: {
+      transition: {
+        staggerChildren: 0.6,
+        repeat: Infinity,
+        repeatDelay: 1.5,
+      },
     },
   };
-  const second = {
-    initial: {
-      x: -20,
-      rotate: 5,
-    },
-    hover: {
-      x: 0,
-      rotate: 0,
+
+  const row = {
+    initial: { x: 0 },
+    animate: {
+      x: [0, 8, 0],
+      transition: { duration: 0.6, ease: "easeInOut" },
     },
   };
+
   return (
     <motion.div
       initial="initial"
       animate="animate"
-      whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2">
-      <motion.div
-        variants={first}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
-        <div
-          className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
-        <p
-          className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Just code in Vanilla Javascript
-        </p>
-        <p
-          className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Delusional
-        </p>
-      </motion.div>
-      <motion.div
-        className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
-        <div
-          className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
-        <p
-          className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Tailwind CSS is cool, you know
-        </p>
-        <p
-          className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Sensible
-        </p>
-      </motion.div>
-      <motion.div
-        variants={second}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
-        <div
-          className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
-        <p
-          className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          I love angular, RSC, and Redux.
-        </p>
-        <p
-          className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Helpless
-        </p>
-      </motion.div>
+      variants={container}
+      className="flex flex-1 w-full h-full min-h-[6rem] rounded-2xl p-5 flex-col justify-center gap-3 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600">
+      {opinions.map((opinion) => (
+        <motion.div
+          key={opinion.tag}
+          variants={row}
+          whileHover={{ scale: 1.03 }}
+          className="flex items-center justify-between gap-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-3">
+          <span className="sm:text-sm text-xs font-semibold text-white">
+            {opinion.text}
+          </span>
+          <span
+            className={cn(
+              "text-[10px] font-semibold px-2 py-0.5 rounded-full border whitespace-nowrap",
+              opinion.tagClass
+            )}>
+            {opinion.tag}
+          </span>
+        </motion.div>
+      ))}
     </motion.div>
   );
 };
-  
+
+const SkeletonSix = () => (
+  <div className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-2xl items-center justify-center overflow-hidden bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600">
+    <motion.div
+      className="absolute -left-4 -top-4 h-16 w-16 rounded-full bg-white/10 blur-xl"
+      animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0.9, 0.5] }}
+      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+    />
+    <motion.div
+      className="absolute -right-6 -bottom-6 h-20 w-20 rounded-full bg-white/10 blur-xl"
+      animate={{ scale: [1, 1.25, 1], opacity: [0.5, 0.9, 0.5] }}
+      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+    />
+    <motion.div
+      className="relative flex items-center justify-center h-20 w-12 rounded-2xl border-2 border-white/30 bg-white/10 backdrop-blur-sm shadow-lg"
+      animate={{ y: [0, -10, 0], rotate: [-3, 3, -3] }}
+      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+    >
+      <IconSmartphone className="h-6 w-6 text-white" />
+    </motion.div>
+  </div>
+);
+
 
 const SkeletonTwo = () => {
   const variants = {
@@ -181,15 +212,16 @@ const SkeletonTwo = () => {
       initial="initial"
       animate="animate"
       whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2">
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2] flex-col space-y-2">
       {arr.map((_, i) => (
         <motion.div
           key={"skelenton-two" + i}
           variants={variants}
           style={{
             maxWidth: Math.random() * (100 - 40) + 40 + "%",
+            ...shiftingGradient,
           }}
-          className="flex flex-row rounded-full border bg-gradient-to-r from-purple-500 to-pink-500 border-black dark:border-white/[0.2] p-2  items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"></motion.div>
+          className="flex flex-row rounded-full border border-black dark:border-white/[0.2] items-center space-x-2 w-full h-4 animate-gradient-shift" />
       ))}
     </motion.div>
   );
@@ -254,23 +286,25 @@ const SkeletonFive = () => {
     <motion.div
       initial="initial"
       whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2">
+      className="flex flex-1 w-full h-full min-h-[6rem] rounded-2xl p-4 flex-col justify-center space-y-2 bg-gradient-to-br from-pink-600 via-fuchsia-600 to-indigo-600">
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black">
+        className="flex flex-row rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-2  items-start space-x-2">
         <div
-          className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
-        <p className="text-xs text-neutral-500">
+          className="h-6 w-6 rounded-full shrink-0 animate-gradient-shift"
+          style={shiftingGradient} />
+        <p className="text-xs text-white/90">
           There are a lot of cool framerworks out there like React, Angular,
           Vue, Svelte that can make your life ....
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black">
-        <p className="text-xs text-neutral-500">Use PHP.</p>
+        className="flex flex-row rounded-full border border-white/20 bg-white/10 backdrop-blur-sm p-2 items-center justify-end space-x-2 w-3/4 ml-auto">
+        <p className="text-xs text-white/90">Use PHP.</p>
         <div
-          className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
+          className="h-6 w-6 rounded-full shrink-0 animate-gradient-shift"
+          style={shiftingGradient} />
       </motion.div>
     </motion.div>
   );
@@ -284,12 +318,12 @@ const items = [
     title: "Conversational Interfaces",
     description: (
       <span className="text-sm">
-        Human-like UI patterns that feel natural, intuitive, and branded — just like chatting with Esleytel Inc.
+        Human-like UI patterns that feel natural, intuitive, and branded — just like chatting with Esleytel LLC.
       </span>
     ),
     header: <SkeletonOne />,
     className: "md:col-span-1",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-300" />,
   },
   {
     title: "Dynamic Data Systems",
@@ -300,7 +334,7 @@ const items = [
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-300" />,
   },
   {
     title: "Creative Visual Identity",
@@ -311,7 +345,7 @@ const items = [
     ),
     header: <SkeletonThree />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    icon: <IconSignature className="h-4 w-4 text-neutral-300" />,
   },
   {
     title: "Full-Stack Engineering",
@@ -321,8 +355,8 @@ const items = [
       </span>
     ),
     header: <SkeletonFour />,
-    className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    className: "md:col-span-1",
+    icon: <IconTableColumn className="h-4 w-4 text-neutral-300" />,
   },
   {
     title: "Real-Time Product Experiences",
@@ -333,7 +367,17 @@ const items = [
     ),
     header: <SkeletonFive />,
     className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-300" />,
+  },
+  {
+    title: "Mobile-First Experiences",
+    description: (
+      <span className="text-sm">
+        Native-feel apps and responsive interfaces that work beautifully on every screen, from phone to desktop.
+      </span>
+    ),
+    header: <SkeletonSix />,
+    className: "md:col-span-1",
+    icon: <IconSmartphone className="h-4 w-4 text-neutral-300" />,
   },
 ];
-

@@ -10,7 +10,7 @@ const Section4 = ({content}) => {
       <MaskContainer
         revealText={
           <p className="mx-auto max-w-4xl text-center text-4xl font-bold text-slate-800 dark:text-white">
-            Starting from the beginning is never a setback. <span className="text-light-cream">Beginning</span> represents understanding where to start. At <span className="text-light-cream">Esleytel Inc.</span>, we focus on learning, growing, and tackling challenges we may not have anticipated along the way.
+            Starting from the beginning is never a setback. <span className="text-light-cream">Beginning</span> represents understanding where to start. At <span className="text-light-cream">Esleytel LLC.</span>, we focus on learning, growing, and tackling challenges we may not have anticipated along the way.
           </p>
         }
         className="h-[40rem] rounded-md  text-white dark:text-black"

@@ -9,7 +9,7 @@ import {
 export function DraggableCardDemo({items, title}) {
   return (
 <DraggableCardContainer
-  className="relative flex flex-col items-center justify-center w-full min-h-screen px-4 py-10 sm:px-6 md:px-10 lg:px-20 overflow-hidden"
+  className="relative flex flex-col items-center justify-center w-full min-h-[560px] sm:min-h-[640px] px-4 py-10 sm:px-6 md:px-10 lg:px-20 overflow-hidden"
 >
   <p
     className="mb-8 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-neutral-400 dark:text-neutral-800"
@@ -40,8 +40,8 @@ const Section2 = ({content}) => {
   
 
   return (
-    <div className="bg-white h-screen py-12 px-4 sm:px-6 lg:px-8 overflow-hidden ">
-      
+    <div className="bg-white py-12 px-4 sm:px-6 lg:px-8 overflow-hidden ">
+
       <DraggableCardDemo ref={containerRef} items={content.items} title={content.title}/>
     </div>
   );

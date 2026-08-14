@@ -221,7 +221,7 @@ export const Card = ({
         </div>
         <BlurImage
           src={card.src}
-          alt={'Esleytel Inc – Creative tech studio building web, mobile, and branding solutions'}
+          alt={'Esleytel LLC – Creative tech studio building web, mobile, and branding solutions'}
           fill
           className="absolute inset-0 z-10 object-cover" />
       </motion.button>
@@ -253,7 +253,7 @@ export const BlurImage = ({
       loading="lazy"
       decoding="async"
       blurDataURL={typeof src === "string" ? src : undefined}
-      alt={alt ? alt : "Esleytel Inc – Creative tech studio building web, mobile, and branding solutions"}
+      alt={alt ? alt : "Esleytel LLC – Creative tech studio building web, mobile, and branding solutions"}
       {...rest} />
   );
 };

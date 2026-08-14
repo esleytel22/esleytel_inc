@@ -11,7 +11,7 @@
 //   const { section1, section2, section3, section4 } = servicespage;
 
 //   useEffect(() => {
-//     document.title = "Esleytel Inc.  |  Services";
+//     document.title = "Esleytel LLC.  |  Services";
 //   }, []);
 
 //   return (

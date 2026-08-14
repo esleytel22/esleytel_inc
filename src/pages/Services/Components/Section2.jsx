@@ -9,7 +9,7 @@
 //       <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
 //       <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
 //       <h2 className="dark:text-white inline-flex gap-3 justify-center items-center text-black mt-4 font-bold text-center text-2xl pb-5">
-//         <img src="/imgs/esleytel-logo.png" className="ms-2 h-10 w-10" alt="Esleytel Inc – Creative tech studio building web, mobile, and branding solutions" />{" "}
+//         <img src="/imgs/esleytel-logo.png" className="ms-2 h-10 w-10" alt="Esleytel LLC – Creative tech studio building web, mobile, and branding solutions" />{" "}
 //         {title}
 //       </h2>
 //       <ul className="pb-10">
@@ -39,7 +39,7 @@
 //         })}
 //       </ul>
 // <a
-//       href={`https://wa.me/918610663178?text=${encodeURIComponent(`Hi Esleytel Inc, I'm interested in the ${title} package. Can you provide more details?`)}`}
+//       href={`https://wa.me/918610663178?text=${encodeURIComponent(`Hi Esleytel LLC, I'm interested in the ${title} package. Can you provide more details?`)}`}
 //       target="_blank"
 //       rel="noopener noreferrer"
 //       className="text-sm md:text-base font-semibold rounded-full px-6 py-3 mt-auto transition-all duration-300 ease-in-out transform bg-light-cream text-black dark:text-white shadow-md hover:shadow-xl hover:scale-105 hover:bg-dark-cream hover:text-white dark:hover:bg-neutral-800 focus:outline-none focus:ring-4 focus:ring-yellow-400/50"

@@ -28,22 +28,33 @@ export const homepage = {
     ],
   },
   section3: {
-    heading: "Discover additional services that elevate your digital journey beyond expectations.",
+    heading: "Development, Document Management & IT Support Services",
     cards: [
       {
-        title: "Tech Service",
-        description:
+        title: "Custom Web & Application Development",
+        intro:
+          "Tailored digital designs that connect your brand with your audience, professionally and effectively.",
+        capabilities:
+          "End-to-end support for deploying React, Flutter, and JavaScript applications.",
+        services:
+          "Comprehensive domain acquisition, code-level programming support, and backend troubleshooting aligned to your company’s technical requirements.",
+      },
+      {
+        title: "Enterprise Document Management Solutions",
+        intro: "Organizing your documents so your business can move faster.",
+        capabilities:
+          "Advanced SharePoint document support, including customized site development and design.",
+        services:
+          "Custom API integration and automated document indexing to maximize workflow organization, security, and accessibility.",
+      },
+      {
+        title: "Workplace Tech Services & Infrastructure",
+        intro:
           "Providing end-user workstations outfitted with industry-leading, top-of-the-line equipment.",
-      },
-      {
-        title: "Document Management",
-        description:
-          "SharePoint document support, including customized site development, API integration, and document indexing for improved organization and accessibility.",
-      },
-      {
-        title: "Web Development",
-        description:
-          "Providing support for deploying React, Flutter, and JavaScript applications, along with domain acquisition to meet your company’s technical requirements.",
+        capabilities:
+          "Full hardware procurement, configuration, deployment, and provisioning workstation setup.",
+        services:
+          "On-demand rapid response helpdesk support for daily operational disruptions, including printer malfunctions, hardware setup, and network connectivity.",
       },
     ],
   },
@@ -561,63 +572,28 @@ export const portfoliopage = {
         "Designs that click. Code that sticks.",
         "Marketing, that’s magic",
       ],
-      project: [
-        "Name of the project 1",
-        "Description of the project 1 in one or two lines (should include the stack or the tool used in it)",
-        "Name of the project 2",
-        "Description of the project 2 in one or two lines (should include the stack or the tool used in it)",
-      ],
-      images: [
-        "/imgs/placeholder.png", // First image (left)
-        "/imgs/placeholder.png", // Second image (right)
-      ],
     },
-    images: [
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763747072/abe746ee-6199-4b2f-bfe1-653722e87a31.png",
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763747210/f0feb4d9-fe85-4ce7-b567-0fa979167c80.png",
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763747158/9b496f2a-06ca-490d-8d47-587b75da95b1.png",
-      "/imgs/Project-2.png",
-      
-       "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763747072/abe746ee-6199-4b2f-bfe1-653722e87a31.png",
-       "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763747951/Screenshot_2025-11-21_232834_y9yogu.png",
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763747210/f0feb4d9-fe85-4ce7-b567-0fa979167c80.png",
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763747158/9b496f2a-06ca-490d-8d47-587b75da95b1.png",
-      "/imgs/Fashbridge-logo.png",
-      
-      "/imgs/Fashbridge-logo.png",
-      "/imgs/iq-bridge-logo.png",
-      "/imgs/Cashew_Mockup.svg",
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763748256/Screenshot_2025-11-21_233345_wnodom.png",
-
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763748113/Screenshot_2025-11-21_233129_nbsiii.png",
-      "/imgs/Traffic-logo.jpg",
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763747608/77a9bb23-3601-46ee-b370-f33bfe566586.png",
-      "/imgs/Project-2.png",
-      
-      "/imgs/V&D-logo.jpg",
-      "/imgs/Tourist-logo.jpg",
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763747850/Screenshot_2025-11-21_232650_yzvags.png",
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763747210/f0feb4d9-fe85-4ce7-b567-0fa979167c80.png",
-      
-      
-     "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763748113/Screenshot_2025-11-21_233129_nbsiii.png",
-      "/imgs/Traffic-logo.jpg",
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763747608/77a9bb23-3601-46ee-b370-f33bfe566586.png",
-      "/imgs/Project-2.png",
-      
-      "/imgs/Fashbridge-logo.png",
-      "/imgs/iq-bridge-logo.png",
-      "/imgs/Cashew_Mockup.svg",
-      "https://res.cloudinary.com/dh8zo1lan/image/upload/v1763748256/Screenshot_2025-11-21_233345_wnodom.png",
-      
-      "https://assets.aceternity.com/macbook-scroll.png",
-      "https://assets.aceternity.com/cloudinary_bkp/Meteors_fye3ys.png",
-      "https://assets.aceternity.com/cloudinary_bkp/Moving_Border_yn78lv.png",
-      
-      
-      
-      
-      
+    projects: [
+      {
+        title: "Gourmet Dining Experience – Modern Restaurant Platform",
+        src: "/imgs/Restaurant_Templet.png",
+        link: "https://esleytel.dev",
+      },
+      {
+        title: "NJ Beach Body Championship – Event Registration Portal",
+        src: "/imgs/NJBBC_Event_Mockup.png",
+        link: "https://esleytel22.github.io/Beach_Body_NJ/",
+      },
+      {
+        title: "Enterprise Document Hub – SharePoint Reimagined",
+        src: "/imgs/Document_Management_Mockup.png",
+        link: "/case-studies/document-management",
+      },
+      {
+        title: "Hanabi Izakaya – Restaurant Landing Page",
+        src: "/imgs/Hanabi_Izakaya_Mockup.png",
+        link: "https://esleytel22.github.io/hanabi-izakaya/",
+      },
     ],
   },
   section3: {
@@ -714,20 +690,20 @@ export const portfoliopage = {
 };
 
 export const   navbar = {
-    title: ['Esleytel Inc', '.'],
+    title: ['Esleytel LLC', '.'],
     pages: [
      {
-        link:'/',
+        link:'#home',
         name: 'Home'
       },
             {
-        link:'/about-us',
+        link:'#about',
         name: 'About'
       },         {
-        link:'/portfolio',
+        link:'#portfolio',
         name: 'Portfolio'
       },      {
-        link:'/contact-us',
+        link:'#contact',
         name: 'Contact'
       },
 
@@ -739,7 +715,7 @@ export const   navbar = {
 
 export const footer = {
   company: {
-    name: "Esleytel Inc",
+    name: "Esleytel LLC",
     logo: "/imgs/arrow.png", 
     highlight: ".",
     description: "By getting a quote, you agree to our Privacy Policy and consent to receive updates.",
@@ -747,10 +723,10 @@ export const footer = {
     email_button: "Get a Quote"
   },
   quickLinks: [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about-us" },
-    
-    { name: "Contact Us", href: "/contact-us" },
+    { name: "Home", href: "#home" },
+    { name: "About Us", href: "#about" },
+    { name: "Portfolio", href: "#portfolio" },
+    { name: "Contact Us", href: "#contact" },
   ],
   resources: [
     { name: "Help Center", href: "#" },
@@ -769,7 +745,7 @@ export const footer = {
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms of Service", href: "/terms-of-service" },
   ],
-  copyright: "© 2026 Esleytel Inc.  All rights reserved."
+  copyright: "© 2026 Esleytel LLC.  All rights reserved."
 };
 
 

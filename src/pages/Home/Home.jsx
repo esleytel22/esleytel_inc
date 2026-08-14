@@ -1,13 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, lazy, Suspense } from "react";
-import { homepage, aboutpage, servicespage, portfoliopage } from "../../../utils/content";
+import React, { lazy, Suspense } from "react";
+import { homepage, aboutpage, servicespage } from "../../../utils/content";
 // Lazy import each section component
 const Section1 = lazy(() => import("./Components/Section1/Section1"));
 const Section2 = lazy(() => import("./Components/Section2/Section2"));
 const Section3 = lazy(() => import("./Components/Section3/Section3"));
 const Section4 = lazy(() => import("./Components/Section4/Section4"));
 //const Section5 = lazy(() => import("./Components/Section5/Section5")); // included even if not used
-const Section6 = lazy(() => import("./Components/Section6/Section6"));
 const Section7 = lazy(() => import("./Components/Section7/Section7"));
 //const Section8 = lazy(() => import("./Components/Section8/Section8"));
 //const Section9 = lazy(() => import("./Components/Section9/Section9"));
@@ -22,7 +21,6 @@ export default function Home() {
     section3,
     section4,
     section5,
-    section6,
     section7,
     section8,
     section9,
@@ -34,10 +32,6 @@ export default function Home() {
     servicessection3,
     servicessection4,
   } = servicespage;
-
-  useEffect(() => {
-    document.title = "Esleytel Inc.  |  Home";
-  }, []);
 
   return (
     <>
@@ -71,14 +65,9 @@ export default function Home() {
       </Suspense>  */}
 
       {/*This was not needed, could be used later*/ }
-       <Suspense fallback={<div>Loading Section 6...</div>}>
-        <Section6 content={section6} />
-      </Suspense> 
-      
-      {/*This was not needed, could be used later*/ }
        <Suspense fallback={<div>Loading Section 7...</div>}>
         <Section7 content={section7} />
-      </Suspense> 
+      </Suspense>
 
       {/* <Suspense fallback={<div>Loading Section 8...</div>}>
         <Section8 content={section8} />

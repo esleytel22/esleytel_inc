@@ -1,4 +1,4 @@
-import React, { useEffect, lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { aboutpage } from "../../../utils/content";
 
 // Lazy load section components
@@ -9,10 +9,6 @@ const Section4 = lazy(() => import("./Components/Section4"));
 
 export default function AboutUs() {
   const { section1, section2, section3, section4 } = aboutpage;
-
-  useEffect(() => {
-    document.title = "Esleytel Inc.  |  About Us";
-  }, []);
 
   return (
     <>

@@ -25,7 +25,7 @@ export default function Greet() {
           Stay tuned — our website will be live soon!
         </p>
         <p className="text-sm text-gray-500">
-          — Esleytel Inc. Team
+          — Esleytel LLC. Team
         </p>
       </div>
     </AuroraBackground>

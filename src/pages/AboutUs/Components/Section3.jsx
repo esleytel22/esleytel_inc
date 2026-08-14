@@ -2,6 +2,7 @@ import React from 'react';
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { BentoGridThirdDemo } from './BentoGridDemo';
+import { AuroraText } from "@/components/magicui/aurora-text";
 import {
   TbClipboardCopy,
   TbFileBroken,
@@ -53,7 +54,12 @@ const Section3 = ({content}) => {
     <div className="bg-black text-white font-sans h-full  py-20 px-10">
       <div className="max-w-6xl mx-auto py-12 px-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-mona-sans tracking-tight">
-          {content.title}
+          <AuroraText
+            colors={["#fff3c4", "#c18b13", "#86602c", "#ffe29a", "#e0b352"]}
+            className="inline"
+          >
+            {content.title}
+          </AuroraText>
         </h1>
       </div>
 

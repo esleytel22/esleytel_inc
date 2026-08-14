@@ -5,7 +5,6 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 
 
 
@@ -23,7 +22,7 @@ const ReviewCard = ({ img, name, username, body }) => {
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" loading="lazy" width="32" height="32" alt="Esleytel Inc – Creative tech studio building web, mobile, and branding solutions" src={img}/>
+        <img className="rounded-full" loading="lazy" width="32" height="32" alt="Esleytel LLC – Creative tech studio building web, mobile, and branding solutions" src={img}/>
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -91,8 +90,8 @@ export default function Section6({content}) {
       </AuroraText>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 w-9/10 mx-auto">
         {content.projects.map((project, idx) => (
-          <CardContainer className="inter-var" key={idx}>
-            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border  ">
+          <CardContainer className="inter-var" rotationFactor={55} key={idx}>
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-full w-full rounded-xl p-6 border">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white">
@@ -111,7 +110,7 @@ export default function Section6({content}) {
                   height="1000"
                   width="1000"
                   className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                  alt="Esleytel Inc – Creative tech studio building web, mobile, and branding solutions"
+                  alt="Esleytel LLC – Creative tech studio building web, mobile, and branding solutions"
                 />
               </CardItem>
 <CardItem translateZ="150" className="mt-6 flex justify-center items-center w-full">
@@ -119,8 +118,8 @@ export default function Section6({content}) {
     whileHover={{ x: 5 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
-    <Link
-      to="/portfolio"
+    <a
+      href="#portfolio"
       className="inline-flex items-center gap-2 hover:text-light-cream hover:underline font-medium group"
     >
       Explore More
@@ -128,7 +127,7 @@ export default function Section6({content}) {
         className="transition-transform duration-300 group-hover:translate-x-1"
         size={18}
       />
-    </Link>
+    </a>
   </motion.div>
 </CardItem>
             </CardBody>

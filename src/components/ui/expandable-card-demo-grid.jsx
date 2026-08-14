@@ -1,7 +1,10 @@
 
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { FolderOpen, Trophy, Utensils } from "lucide-react";
 import { useOutsideClick } from "../../hooks/use-outside-click";
+
+const CARD_ICONS = [Utensils, Trophy, FolderOpen];
 
 export function ExpandableCardDemo({ cards }) {
   const [active, setActive] = useState(null);
@@ -74,7 +77,7 @@ export function ExpandableCardDemo({ cards }) {
                   loading="lazy"
                   src={active.src}
                   alt={
-                    "Esleytel Inc – Creative tech studio building web, mobile, and branding solutions"
+                    "Esleytel LLC – Creative tech studio building web, mobile, and branding solutions"
                   }
                   className="w-full sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
@@ -123,51 +126,75 @@ export function ExpandableCardDemo({ cards }) {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto">
-        {cards.map((card, id) => (
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {cards.map((card, id) => {
+          const Icon = CARD_ICONS[id % CARD_ICONS.length];
+          return (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-5 flex flex-col items-center justify-around dark:hover:bg-neutral-800 rounded-xl cursor-pointer hover:shadow-lg shadow dark:border-neutral-700 bg-white dark:bg-neutral-900 transition"
+            className="group cursor-pointer overflow-hidden rounded-3xl border border-black/5 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-2 hover:ring-[#c18b34]/40 dark:border-neutral-700 dark:bg-neutral-900"
           >
             <motion.div
               layoutId={`image-${card.title}-${id}`}
-              className="w-full h-full mb-4"
+              className="relative overflow-hidden bg-neutral-900"
             >
-              <img
-                src={card.src}
-                loading="lazy"
-                alt={
-                  "Esleytel Inc – Creative tech studio building web, mobile, and branding solutions"
-                }
-                className="w-full h-full rounded-lg object-contain object-top"
-              />
+              <div className="flex items-center gap-1.5 px-4 py-2.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
+                <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/80" />
+                <span className="h-2.5 w-2.5 rounded-full bg-green-400/80" />
+              </div>
+              <div className="relative aspect-video overflow-hidden">
+                <img
+                  src={card.src}
+                  loading="lazy"
+                  alt={
+                    "Esleytel LLC – Creative tech studio building web, mobile, and branding solutions"
+                  }
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <span className="absolute bottom-4 left-4 flex items-center gap-1 text-sm font-semibold text-white opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                  View Project
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </div>
             </motion.div>
 
-            <div className="text-center">
+            <div className="relative z-10 -mt-6 ml-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#c18b34] text-white shadow-lg ring-4 ring-white dark:ring-neutral-900">
+              <Icon className="h-5 w-5" />
+            </div>
+
+            <div className="p-7 pt-4 text-left">
               <motion.h3
                 layoutId={`title-${card.title}-${id}`}
-                className="font-semibold text-neutral-800 dark:text-neutral-100 text-lg"
+                className="font-bold text-neutral-900 dark:text-neutral-100 text-xl leading-snug"
               >
                 {card.title}
               </motion.h3>
               <motion.p
                 layoutId={`description-${card.description}-${id}`}
-                className="text-sm text-neutral-600 dark:text-neutral-400 mt-2"
+                className="text-sm text-neutral-600 dark:text-neutral-400 mt-3 line-clamp-3"
               >
                 {card.description}
               </motion.p>
-            </div>
 
-            <motion.button
-              layoutId={`button-${card.title}-${id}`}
-              className="mt-5 px-4 py-2 text-sm rounded-full font-bold bg-white hover:bg-amber-900 hover:text-white text-black dark:bg-neutral-800 dark:text-white dark:hover:bg-green-600"
-            >
-              {card.ctaText}
-            </motion.button>
+              <motion.button
+                layoutId={`button-${card.title}-${id}`}
+                className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 text-sm rounded-full font-semibold bg-black text-white transition-colors group-hover:bg-[#c18b34] dark:bg-neutral-800 dark:group-hover:bg-[#c18b34]"
+              >
+                {card.ctaText}
+                <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </motion.button>
+            </div>
           </motion.div>
-        ))}
+          );
+        })}
       </ul>
     </>
   );

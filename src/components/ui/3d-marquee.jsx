@@ -3,14 +3,14 @@
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 export const ThreeDMarquee = ({
-  images,
+  projects,
   className
 }) => {
-  // Split the images array into 4 equal parts
-  const chunkSize = Math.ceil(images.length / 4);
+  // Split the projects array into 4 equal parts
+  const chunkSize = Math.ceil(projects.length / 4);
   const chunks = Array.from({ length: 4 }, (_, colIndex) => {
     const start = colIndex * chunkSize;
-    return images.slice(start, start + chunkSize);
+    return projects.slice(start, start + chunkSize);
   });
   return (
     <div
@@ -36,24 +36,31 @@ export const ThreeDMarquee = ({
                 key={colIndex + "marquee"}
                 className="flex flex-col items-start gap-8">
                 <GridLineVertical className="-left-4" offset="80px" />
-                {subarray.map((image, imageIndex) => (
-                  <div className="relative" key={imageIndex + image}>
+                {subarray.map((project, projectIndex) => (
+                  <div className="relative" key={projectIndex + project.src}>
                     <GridLineHorizontal className="-top-4" offset="20px" />
-                    <motion.img
-                      whileHover={{
-                        y: -10,
-                      }}
-                      transition={{
-                        duration: 0.3,
-                        ease: "easeInOut",
-                      }}
-                      key={imageIndex + image}
-                      src={image}
-                      loading="lazy"
-                      alt={`Esleytel Inc – Creative tech studio building web, mobile, and branding solutions`}
-                      className="aspect-[970/700] rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl"
-                      width={970}
-                      height={700} />
+                    <a
+                      href={project.link}
+                      target={project.link?.startsWith("http") ? "_blank" : undefined}
+                      rel={project.link?.startsWith("http") ? "noopener noreferrer" : undefined}
+                      aria-label={project.title}
+                      className="block"
+                    >
+                      <motion.img
+                        whileHover={{
+                          y: -10,
+                        }}
+                        transition={{
+                          duration: 0.3,
+                          ease: "easeInOut",
+                        }}
+                        src={project.src}
+                        loading="lazy"
+                        alt={project.title || "Esleytel LLC – Creative tech studio building web, mobile, and branding solutions"}
+                        className="aspect-[970/700] rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl cursor-pointer"
+                        width={970}
+                        height={700} />
+                    </a>
                   </div>
                 ))}
               </motion.div>

@@ -47,7 +47,7 @@ export default function LaunchCountdown() {
             colors={["#fff3c4", "#c18b13", "#86602c", "#ffe29a", "#e0b352"]}
             className="inline"
           >
-            Esleytel Inc. Website Launch
+            Esleytel LLC. Website Launch
           </AuroraText>
         </h1>
 

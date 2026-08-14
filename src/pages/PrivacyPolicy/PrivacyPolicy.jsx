@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 export default function PrivacyPolicy() {
   useEffect(() => {
-    document.title = "Privacy Policy | Esleytel Inc.";
+    document.title = "Privacy Policy | Esleytel LLC.";
     window.scrollTo(0, 0);
   }, []);
 
@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
             <p className="text-gray-700 leading-relaxed">
-              Welcome to Esleytel Inc. ("Company," "we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+              Welcome to Esleytel LLC. ("Company," "we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
             </p>
             <p className="text-gray-700 leading-relaxed mt-4">
               If you have any questions or concerns about this privacy policy or our practices regarding your personal information, please contact us at{" "}
@@ -160,7 +160,7 @@ export default function PrivacyPolicy() {
               If you have questions or comments about this Privacy Policy, please contact us at:
             </p>
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <p className="text-gray-900 font-semibold mb-2">Esleytel Inc.</p>
+              <p className="text-gray-900 font-semibold mb-2">Esleytel LLC.</p>
               <p className="text-gray-700">Email: <a href="mailto:helpdesk@esleytel.space" className="text-amber-600 hover:underline">helpdesk@esleytel.space</a></p>
               <p className="text-gray-700">Support Page: <a href="/contact-us" className="text-amber-600 hover:underline">Contact Us</a></p>
             </div>

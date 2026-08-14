@@ -1,73 +1,61 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { AuroraText } from "@/components/magicui/aurora-text";
 
 const LeftVisualSection = ({ step, steps }) => {
-  const dragBoundary = useRef(null);
+  const activeStep = steps.find((s) => s.id === step);
 
   return (
-    <div
-      ref={dragBoundary}
-      className="w-full md:w-2/5 relative overflow-hidden bg-black h-full"
-    >
-      <BackgroundBeamsWithCollision className="bg-black h-full">
-        <div className="relative bg-gradient-to-br h-full p-8 flex flex-col justify-center items-center">
-          <div className="w-full text-center z-20">
-            {/* ✅ DRAGGABLE AVATAR */}
-            <motion.div
-              drag
-              dragConstraints={dragBoundary}
-              dragElastic={0.2}
-              whileDrag={{ scale: 1.1, rotate: 10 }}
-              initial={{ y: 0, rotate: 0 }}
-              animate={{
-                y: [0, -20, 0],
-                rotate: [0, 360],
-              }}
-              transition={{
-                y: {
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                },
-                rotate: {
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "linear",
-                },
-              }}
-              className="relative w-44 h-44 mx-auto mb-8 cursor-grab active:cursor-grabbing rounded-full  flex items-center justify-center overflow-hidden"
-            >
-              {/* ✅ Avatar Image inside the draggable wrapper */}
-              <motion.img
-                src="/imgs/arrow.png"
-                alt="Esleytel Inc – Creative tech studio building web, mobile, and branding solutions"
-                className="object-contain"
-                width={150}
-                loading="lazy"
-                height={150}
-                draggable={false}
-                initial={{ scale: 0.95 }}
-                animate={{ scale: [0.95, 1, 0.95] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              />
-              {/* Optional Glow */}
-              <div className="absolute -inset-2 z-0 blur-2xl rounded-full  opacity-20 pointer-events-none" />
-            </motion.div>
+    <div className="w-full md:w-2/5 relative overflow-hidden bg-black self-stretch">
+      <BackgroundBeamsWithCollision className="bg-black h-full md:h-full">
+        <div className="relative h-full w-full p-8 flex flex-col z-20">
+          {/* Title */}
+          <div>
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+              <AuroraText
+                colors={["#fff3c4", "#c18b13", "#86602c", "#ffe29a", "#e0b352"]}
+                className="inline"
+              >
+                Contact
+              </AuroraText>
+            </h1>
+            <p className="text-[#fffff0]/70 text-sm mt-2 max-w-xs">
+              Complete the form to schedule your personalized session with our
+              team.
+            </p>
+          </div>
 
-            {/* Step title */}
-            <h3 className="text-2xl font-bold mb-3 text-[#fffff0]">
-<p className="text-base sm:text-lg md:text-xl font-semibold text-center my-10">
-  {step === 4 ? (
-    <span className="text-green-500 ">Appointment Confirmed </span>
-  ) : (
-    <>Step {step} of {steps.length}</>
-  )}
-</p>
-            </h3>
+          {/* Focal step display */}
+          <div className="flex-1 flex flex-col items-center justify-center text-center">
+              <motion.div
+                key={step}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className="flex flex-col items-center"
+              >
+                <div
+                  className={`w-24 h-24 rounded-full ${
+                    activeStep?.color || "bg-[#c18b34]"
+                  } flex items-center justify-center text-[#fffff0] text-3xl mb-6 ring-4 ring-[#fffff0]/20 shadow-lg [&_svg]:w-10 [&_svg]:h-10`}
+                >
+                  {activeStep?.icon}
+                </div>
 
-            {/* Step indicators */}
-            <div className="flex justify-center gap-4 mb-8">
+                <p className="text-base sm:text-lg font-semibold text-[#fffff0]/70 uppercase tracking-wide mb-2">
+                  {step === 4 ? (
+                    <span className="text-green-400">Appointment Confirmed</span>
+                  ) : (
+                    <>Step {step} of {steps.length}</>
+                  )}
+                </p>
+                <h3 className="text-3xl font-bold text-[#fffff0]">
+                  {activeStep?.name}
+                </h3>
+              </motion.div>
+
+            {/* Step progress */}
+            <div className="flex justify-center gap-4 mt-10">
               {steps.map((stepItem) => (
                 <div
                   key={stepItem.id}
@@ -76,7 +64,7 @@ const LeftVisualSection = ({ step, steps }) => {
                   }`}
                 >
                   <div
-                    className={`w-12 h-12 rounded-full ${stepItem.color} flex items-center justify-center text-[#fffff0] text-xl mb-2 ${
+                    className={`w-10 h-10 rounded-full ${stepItem.color} flex items-center justify-center text-[#fffff0] text-lg mb-2 [&_svg]:w-4 [&_svg]:h-4 ${
                       step === stepItem.id ? "ring-4 ring-[#fffff0]/50" : ""
                     }`}
                   >
@@ -88,13 +76,13 @@ const LeftVisualSection = ({ step, steps }) => {
                 </div>
               ))}
             </div>
+          </div>
 
-            {/* Message */}
-            <div className="bg-[#fffff0]/10 backdrop-blur-sm rounded-lg p-4 border border-[#fffff0]/20">
-              <p className="text-[#fffff0]/90 text-sm">
-                "Our team is excited to work with you. Let's create something amazing together!"
-              </p>
-            </div>
+          {/* Testimonial, pinned to the bottom */}
+          <div className="bg-[#fffff0]/10 backdrop-blur-sm rounded-lg p-4 border border-[#fffff0]/20">
+            <p className="text-[#fffff0]/90 text-sm">
+              "Our team is excited to work with you. Let's create something amazing together!"
+            </p>
           </div>
         </div>
       </BackgroundBeamsWithCollision>

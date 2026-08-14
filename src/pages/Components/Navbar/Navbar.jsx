@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import { navbar } from "../../../../utils/content";
+import { scrollToHash } from "@/lib/scrollToHash";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +13,6 @@ const location = useLocation();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
 
   return (
     <div
@@ -32,7 +26,7 @@ useEffect(() => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a href='/' className="text-white lg:text-2xl text-lg font-bold cursor-pointer inline-flex">
+            <a href='#home' onClick={(e) => scrollToHash(e, "#home")} className="text-white lg:text-2xl text-lg font-bold cursor-pointer inline-flex">
               {navbar.title[0]}{" "}
               <span className="text-light-cream ms-2">{navbar.title[1]}</span>
             </a>
@@ -40,19 +34,14 @@ useEffect(() => {
 
           <div className="hidden xl:flex items-center space-x-8">
             {navbar.pages.map((page, idx) => (
-              <NavLink
+              <a
                 key={idx}
-                to={page.link}
-                className={({ isActive }) =>
-                  `text-xl transition ${
-                    isActive
-                      ? "text-light-cream font-bold"
-                      : "text-white hover:text-light-cream"
-                  }`
-                }
+                href={page.link}
+                onClick={(e) => scrollToHash(e, page.link)}
+                className="text-xl text-white hover:text-light-cream transition"
               >
                 {page.name}
-              </NavLink>
+              </a>
             ))}
 
 
@@ -105,21 +94,16 @@ useEffect(() => {
 
   <div className="space-y-4 flex flex-col">
     {navbar.pages.map((page, idx) => (
-      <NavLink
+      <a
         key={idx}
-        to={page.link}
-        className={({ isActive }) =>
-          `text-xl transition ${
-            isActive
-              ? "text-light-cream font-bold"
-              : "text-white hover:text-light-cream"
-          }`
-        }
+        href={page.link}
+        onClick={(e) => scrollToHash(e, page.link, () => setIsOpen(false))}
+        className="text-xl text-white hover:text-light-cream transition"
       >
         {page.name}
-      </NavLink>
+      </a>
     ))}
-   
+
   </div>
 </div>
 

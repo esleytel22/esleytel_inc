@@ -1,8 +1,34 @@
-import React from "react";
-import FeatureCard from "../FeatureCard/FeatureCard";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
 import { IconCloud } from "@/components/magicui/icon-cloud";
 import { Icon } from "lucide-react";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiDart,
+  SiReact,
+  SiFlutter,
+  SiAndroid,
+  SiHtml5,
+  SiNodedotjs,
+  SiExpress,
+  SiNextdotjs,
+  SiPrisma,
+  SiPostgresql,
+  SiFirebase,
+  SiNginx,
+  SiVercel,
+  SiTestinglibrary,
+  SiJest,
+  SiCypress,
+  SiDocker,
+  SiGit,
+  SiJira,
+  SiGithub,
+  SiGitlab,
+  SiAndroidstudio,
+  SiFigma,
+} from "react-icons/si";
 
 const Icons = {
   gitHub: () => (
@@ -133,64 +159,96 @@ const Icons = {
   ),
 };
 
-const slugs = [
-  "typescript",
-  "javascript",
-  "dart",
-  "react",
-  "flutter",
-  "android",
-  "html5",
-  "nodedotjs",
-  "express",
-  "nextdotjs",
-  "prisma",
-  "postgresql",
-  "firebase",
-  "nginx",
-  "vercel",
-  "testinglibrary",
-  "jest",
-  "cypress",
-  "docker",
-  "git",
-  "jira",
-  "github",
-  "gitlab",
-  "androidstudio",
-  "figma",
+const techIconComponents = [
+  { Icon: SiTypescript, color: "#3178C6" },
+  { Icon: SiJavascript, color: "#F7DF1E" },
+  { Icon: SiDart, color: "#0175C2" },
+  { Icon: SiReact, color: "#61DAFB" },
+  { Icon: SiFlutter, color: "#02569B" },
+  { Icon: SiAndroid, color: "#3DDC84" },
+  { Icon: SiHtml5, color: "#E34F26" },
+  { Icon: SiNodedotjs, color: "#339933" },
+  { Icon: SiExpress, color: "#000000" },
+  { Icon: SiNextdotjs, color: "#000000" },
+  { Icon: SiPrisma, color: "#2D3748" },
+  { Icon: SiPostgresql, color: "#4169E1" },
+  { Icon: SiFirebase, color: "#FFCA28" },
+  { Icon: SiNginx, color: "#009639" },
+  { Icon: SiVercel, color: "#000000" },
+  { Icon: SiTestinglibrary, color: "#E33332" },
+  { Icon: SiJest, color: "#C21325" },
+  { Icon: SiCypress, color: "#17202C" },
+  { Icon: SiDocker, color: "#2496ED" },
+  { Icon: SiGit, color: "#F05032" },
+  { Icon: SiJira, color: "#0052CC" },
+  { Icon: SiGithub, color: "#181717" },
+  { Icon: SiGitlab, color: "#FC6D26" },
+  { Icon: SiAndroidstudio, color: "#3DDC84" },
+  { Icon: SiFigma, color: "#F24E1E" },
 ];
 
 export function IconCloudDemo() {
-  const images = slugs.map(
-    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  const icons = useMemo(
+    () =>
+      techIconComponents.map(({ Icon: TechIcon, color }, index) => (
+        <TechIcon key={index} size={100} color={color} />
+      )),
+    []
   );
 
   return (
     <div className="relative flex size-full items-center justify-center overflow-hidden">
-      <IconCloud images={["/imgs/esleytel-logo.png", ...images]} />
+      <IconCloud icons={icons} />
     </div>
   );
 }
 
+// Outer ring's full footprint: (radius * 2) + iconSize, so it never clips
+// the orbiting icons regardless of how narrow the container gets.
+const ORBIT_FOOTPRINT = 210 * 2 + 40;
+
 export function OrbitingCirclesDemo() {
+  const containerRef = useRef(null);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const updateScale = () => {
+      setScale(Math.min(1, el.offsetWidth / ORBIT_FOOTPRINT));
+    };
+
+    updateScale();
+    const observer = new ResizeObserver(updateScale);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden">
-      <OrbitingCircles iconSize={40} radius={210} speed={2}>
-        <img src="/imgs/esleytel-logo.png" loading="lazy" alt="" />
-        <Icons.notion />
-        <Icons.openai />
-        <Icons.googleDrive />
-        <Icons.gitHub />
-        <Icons.whatsapp />
-      </OrbitingCircles>
-      <IconCloudDemo />
-      <OrbitingCircles iconSize={30} radius={170} reverse speed={1}>
-        <Icons.whatsapp />
-        <Icons.notion />
-        <Icons.openai />
-        <Icons.googleDrive />
-      </OrbitingCircles>
+    <div
+      ref={containerRef}
+      className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden"
+    >
+      <div
+        className="relative flex h-[800px] w-full flex-col items-center justify-center transform-gpu"
+        style={{ transform: `scale(${scale})` }}
+      >
+        <OrbitingCircles iconSize={40} radius={210} speed={2}>
+          <Icons.notion />
+          <Icons.openai />
+          <Icons.googleDrive />
+          <Icons.gitHub />
+          <Icons.whatsapp />
+        </OrbitingCircles>
+        <IconCloudDemo />
+        <OrbitingCircles iconSize={30} radius={170} reverse speed={1}>
+          <Icons.whatsapp />
+          <Icons.notion />
+          <Icons.openai />
+          <Icons.googleDrive />
+        </OrbitingCircles>
+      </div>
     </div>
   );
 }
@@ -198,34 +256,8 @@ export default function Section2({content}) {
 
   return (
     <div className="bg-white text-black">
-      <div className="max-w-screen md:px-section-lg px-section-sm py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div className="flex flex-col justify-center order-2 lg:order-2">
-          <div className="max-w-xl">
-            <h3 className="font-hahmlet text-3xl sm:text-4xl md:text-5xl font-medium leading-tight">
-              {content.heading}
-            </h3>
-            <p className="mt-6 text-base sm:text-lg leading-relaxed">
-              {content.description}
-            </p>
-          </div>
-
-          <div className="mt-10 flex flex-col sm:flex-row gap-3">
-            {content.feature_cards.map((card, idx) => {
-              return (
-                <FeatureCard
-                  key={idx}
-                  title={card.title}
-                  content={card.content}
-                  img={card.img}
-                />
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="flex justify-center items-center order-1 hidden md:block lg:order-1">
-          <OrbitingCirclesDemo />
-        </div>
+      <div className="max-w-screen md:px-section-lg px-section-sm py-16 flex justify-center items-center">
+        <OrbitingCirclesDemo />
       </div>
     </div>
   );
