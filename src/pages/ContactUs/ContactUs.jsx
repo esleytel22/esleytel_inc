@@ -5,7 +5,7 @@ import { SparklesText } from "@/components/magicui/sparkles-text";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { Boxes } from "@/components/ui/background-boxes";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import LeftVisualSection from "./Components/LeftVisualSection";
 import emailjs from "emailjs-com";
 import { checkQuota } from "../../../utils/quotaProvider";

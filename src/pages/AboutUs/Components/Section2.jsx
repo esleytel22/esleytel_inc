@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect, useRef } from 'react';
-import { StoryCard } from './StoryCard/StoryCard';
+import React from 'react';
 import {
   DraggableCardBody,
   DraggableCardContainer,
@@ -35,14 +33,9 @@ export function DraggableCardDemo({items, title}) {
 }
 
 const Section2 = ({content}) => {
-
-  const containerRef = useRef(null)
-  
-
   return (
     <div className="bg-white py-12 px-4 sm:px-6 lg:px-8 overflow-hidden ">
-
-      <DraggableCardDemo ref={containerRef} items={content.items} title={content.title}/>
+      <DraggableCardDemo items={content.items} title={content.title}/>
     </div>
   );
 };

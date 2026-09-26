@@ -1,9 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import HomeButton from "../HomeButton/HomeButton";
 
-export default function Section1({ content }) {
+export default function Section1() {
   return (
     <HeroHighlight
       className="h-screen w-full flex items-center justify-center px-4 text-white bg-black"
@@ -33,14 +33,18 @@ export default function Section1({ content }) {
           <Highlight className="text-white ">End.</Highlight>
         </motion.h1>
 
-        <motion.p
-          className="mt-4 text-base md:text-lg text-gray-400"
+        <motion.div
+          className="mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm md:text-base text-gray-400"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          A lesson without pain is meaningless. That’s because no one can gain without sacrificing something.
-        </motion.p>
+          <span>Web & App Development</span>
+          <span className="text-gray-600">•</span>
+          <span>Document Management</span>
+          <span className="text-gray-600">•</span>
+          <span>IT Support</span>
+        </motion.div>
 
         <motion.div
           className="mt-10 flex flex-wrap justify-center gap-4"

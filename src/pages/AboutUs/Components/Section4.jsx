@@ -3,7 +3,7 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 import { MaskContainer } from '@/components/ui/svg-mask-effect';
 import { PointerHighlight } from '@/components/ui/pointer-highlight';
 
-const Section4 = ({content}) => {
+const Section4 = () => {
   return (
     <div className="bg-white py-12 md:py-20 px-4">
       <div className="hidden lg:block mx-auto px-section-sm md:px-section-lg text-center">

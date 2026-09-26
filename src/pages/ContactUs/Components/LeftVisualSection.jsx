@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { AuroraText } from "@/components/magicui/aurora-text";
 

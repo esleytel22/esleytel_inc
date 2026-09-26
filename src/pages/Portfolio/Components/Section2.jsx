@@ -1,5 +1,6 @@
 "use client";
 import { useMemo } from "react";
+import { MousePointerClick } from "lucide-react";
 import { ThreeDMarquee } from "@/components/ui/3d-marquee";
 
 function shuffle(array) {
@@ -17,7 +18,7 @@ export function ThreeDMarqueeDemo({projects}) {
   // so the same order doesn't repeat in every column (memoized so it
   // doesn't reshuffle on every re-render).
   const repeated = useMemo(
-    () => shuffle(Array.from({ length: 8 }, () => projects).flat()),
+    () => shuffle(Array.from({ length: 14 }, () => projects).flat()),
     [projects]
   );
 
@@ -32,10 +33,17 @@ export function ThreeDMarqueeDemo({projects}) {
 const Section2 = ({content}) => {
   return (
     <div className="bg-white text-black font-sans">
-      <div className="max-w-6xl mx-auto py-12 px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 tracking-tight">
+      <div className="max-w-2xl mx-auto py-20 px-4 text-center">
+        <p className="text-xs font-medium uppercase tracking-[0.3em] text-neutral-400 mb-5">
+          Our Work
+        </p>
+        <h1 className="font-hahmlet text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.15] tracking-tight text-neutral-900 mb-5">
           {content.content.title}
         </h1>
+        <p className="flex items-center justify-center gap-2 text-sm text-neutral-500">
+          <MousePointerClick className="size-4" />
+          {content.content.hint}
+        </p>
       </div>
 
      <ThreeDMarqueeDemo projects={content.projects}/>

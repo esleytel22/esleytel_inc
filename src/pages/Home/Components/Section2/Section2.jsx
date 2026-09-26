@@ -252,7 +252,7 @@ export function OrbitingCirclesDemo() {
     </div>
   );
 }
-export default function Section2({content}) {
+export default function Section2() {
 
   return (
     <div className="bg-white text-black">

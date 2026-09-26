@@ -3,7 +3,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
-import viteCompression from 'vite-plugin-compression';
 import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from 'vite-plugin-pwa';
 
@@ -47,6 +46,9 @@ visualizer({open: true})],
   },
   optimizeDeps: {
     exclude: ['clsx', 'tailwind-merge'],
+  },
+  server: {
+    allowedHosts: ['.loca.lt'],
   },
   build: {
   cssCodeSplit: true,

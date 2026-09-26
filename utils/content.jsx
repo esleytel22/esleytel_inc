@@ -159,7 +159,24 @@ export const aboutpage = {
   section1: {
     title: ["If you don’t know where you are, you’re at the ", "beginning"],
     subtitle: "A bunch of creative minds stirring pixels, code, and caffeine to bring brands to life. ",
- img: '/imgs/right_white.png'
+ img: '/imgs/right_white.png',
+    pillars: [
+      {
+        title: "Mission",
+        description:
+          "To build purposeful, technology-powered digital experiences that help businesses move faster, look sharper, and work smarter.",
+      },
+      {
+        title: "Vision",
+        description:
+          "To be the studio businesses trust to turn ambitious ideas into dependable, real-world products.",
+      },
+      {
+        title: "Values",
+        description:
+          "Craft over shortcuts, clarity over jargon, and partnership over transactions.",
+      },
+    ],
   },section2: {
     title: 'Sometimes the best way to solve your own problems is to help someone else.',
 items : [
@@ -199,7 +216,6 @@ items : [
     image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     className: "absolute top-24 left-[45%] rotate-[-7deg]",
   },
-,
 ]
 ,
   }, section3: {
@@ -562,12 +578,13 @@ export const servicespage = {
 
 export const portfoliopage = {
   section1: {
-    title: ["We focus on ", "Goals ", "that help shape our", "Message"],
-    subtitle: "Not Just Pretty Pixels. Purposeful, Powerful Products",
+    title: ["See our ", "Designs"],
+    subtitle: "We focus on Goals that help shape our Message",
   },
   section2: {
     content: {
       title: "Beyond Templates. Fully Tailored Digital Craft.",
+      hint: "Tap a design to view the project",
       tagline: [
         "Designs that click. Code that sticks.",
         "Marketing, that’s magic",
@@ -593,6 +610,11 @@ export const portfoliopage = {
         title: "Hanabi Izakaya – Restaurant Landing Page",
         src: "/imgs/Hanabi_Izakaya_Mockup.png",
         link: "https://esleytel22.github.io/hanabi-izakaya/",
+      },
+      {
+        title: "Ironclad Barber Co. – Booking Landing Page",
+        src: "/imgs/Ironclad_Barbershop_Mockup.png",
+        link: "https://esleytel22.github.io/Ironclad_barbershop/",
       },
     ],
   },

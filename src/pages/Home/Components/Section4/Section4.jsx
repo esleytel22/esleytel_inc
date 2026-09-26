@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function Section4({content}) {
+export default function Section4() {
   return (
     <div className="bg-black  text-white ">
       {/* <div className="text-center md:px-section-lg px-section-sm">

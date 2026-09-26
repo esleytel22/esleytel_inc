@@ -6,9 +6,9 @@ export const ThreeDMarquee = ({
   projects,
   className
 }) => {
-  // Split the projects array into 4 equal parts
-  const chunkSize = Math.ceil(projects.length / 4);
-  const chunks = Array.from({ length: 4 }, (_, colIndex) => {
+  // Split the projects array into 5 equal parts
+  const chunkSize = Math.ceil(projects.length / 5);
+  const chunks = Array.from({ length: 5 }, (_, colIndex) => {
     const start = colIndex * chunkSize;
     return projects.slice(start, start + chunkSize);
   });
@@ -24,7 +24,7 @@ export const ThreeDMarquee = ({
             style={{
               transform: "rotateX(55deg) rotateY(0deg) rotateZ(-45deg)",
             }}
-            className="relative top-96 right-[50%] grid size-full origin-top-left grid-cols-4 gap-8 transform-3d">
+            className="relative top-[275px] sm:top-[412px] lg:top-[550px] right-[50%] grid size-full origin-top-left grid-cols-5 gap-8 transform-3d">
             {chunks.map((subarray, colIndex) => (
               <motion.div
                 animate={{ y: colIndex % 2 === 0 ? 100 : -100 }}
@@ -44,7 +44,7 @@ export const ThreeDMarquee = ({
                       target={project.link?.startsWith("http") ? "_blank" : undefined}
                       rel={project.link?.startsWith("http") ? "noopener noreferrer" : undefined}
                       aria-label={project.title}
-                      className="block"
+                      className="relative block overflow-hidden rounded-lg ring ring-gray-950/5 hover:shadow-2xl"
                     >
                       <motion.img
                         whileHover={{
@@ -57,9 +57,14 @@ export const ThreeDMarquee = ({
                         src={project.src}
                         loading="lazy"
                         alt={project.title || "Esleytel LLC – Creative tech studio building web, mobile, and branding solutions"}
-                        className="aspect-[970/700] rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl cursor-pointer"
+                        className="aspect-[970/700] object-cover cursor-pointer"
                         width={970}
                         height={700} />
+                      <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent px-3 py-2">
+                        <span className="text-[11px] font-medium uppercase tracking-wider text-white/90">
+                          Tap to view
+                        </span>
+                      </div>
                     </a>
                   </div>
                 ))}

@@ -112,7 +112,7 @@ function CursorCore({
     const cursorInnerRef = useRef()
     const requestRef = useRef()
     const previousTimeRef = useRef()
-    const [coords, setCoords] = useState({ x: 0, y: 0 })
+    const coords = useRef({ x: 0, y: 0 }).current
     const [isVisible, setIsVisible] = useState(false)
     const [isActive, setIsActive] = useState(false)
     const [isActiveClickable, setIsActiveClickable] = useState(false)
@@ -125,7 +125,6 @@ function CursorCore({
      * @param {number} clientY - MouseEvent.clienty
      */
     const onMouseMove = useCallback(({ clientX, clientY }) => {
-      setCoords({ x: clientX, y: clientY })
       cursorInnerRef.current.style.top = `${clientY}px`
       cursorInnerRef.current.style.left = `${clientX}px`
       endX.current = clientX

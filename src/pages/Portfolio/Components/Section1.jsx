@@ -41,20 +41,12 @@ export default function Section1({ content }) {
       <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="flex flex-col justify-center items-center text-center">
           <h1 className="font-hahmlet font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-tight">
-            {content.title[0]}{" "}
+            {content.title[0]}
             <AuroraText
               className="font-bold"
               colors={["#fff3c4", "#c18b13", "#86602c", "#ffe29a", "#e0b352"]}
             >
               {content.title[1]}
-            </AuroraText>
-            <br />
-            {content.title[2]}{" "}
-            <AuroraText
-              className="font-bold"
-              colors={["#fff3c4", "#c18b13", "#86602c", "#ffe29a", "#e0b352"]}
-            >
-              {content.title[3]}
             </AuroraText>
           </h1>
 

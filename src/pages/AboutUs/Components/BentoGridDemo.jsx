@@ -10,7 +10,7 @@ import {
   Smartphone as IconSmartphone,
 } from "lucide-react";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const shiftingGradient = {
   backgroundImage:

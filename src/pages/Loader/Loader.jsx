@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { Loader2 } from "lucide-react";
