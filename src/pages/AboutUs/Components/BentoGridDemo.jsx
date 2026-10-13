@@ -20,7 +20,7 @@ const shiftingGradient = {
 
 export function BentoGridThirdDemo() {
   return (
-    <BentoGrid className=" mx-auto md:auto-rows-[20rem]">
+    <BentoGrid className=" mx-auto md:auto-rows-[minmax(20rem,auto)]">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -149,7 +149,7 @@ const SkeletonFour = () => {
           variants={row}
           whileHover={{ scale: 1.03 }}
           className="flex items-center justify-between gap-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-3">
-          <span className="sm:text-sm text-xs font-semibold text-white">
+          <span className="min-w-0 break-words sm:text-sm text-xs font-semibold text-white">
             {opinion.text}
           </span>
           <span
@@ -293,7 +293,7 @@ const SkeletonFive = () => {
         <div
           className="h-6 w-6 rounded-full shrink-0 animate-gradient-shift"
           style={shiftingGradient} />
-        <p className="text-xs text-white/90">
+        <p className="min-w-0 break-words text-xs text-white/90">
           There are a lot of cool framerworks out there like React, Angular,
           Vue, Svelte that can make your life ....
         </p>

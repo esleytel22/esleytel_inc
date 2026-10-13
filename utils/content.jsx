@@ -604,7 +604,7 @@ export const portfoliopage = {
       {
         title: "Enterprise Document Hub – SharePoint Reimagined",
         src: "/imgs/Document_Management_Mockup.png",
-        link: "/case-studies/document-management",
+        link: "https://esleytel.sharepoint.com/:u:/r/sites/CompanyTemplet/SitePages/CollabHome.aspx?d=w25f59a8414a141d394c482b4e152b215&csf=1&web=2&share=IQCEmvUloRTTQZTEgrThUrIVAWOqOTyAoQgddVEul06kmUc&e=mfoXOW",
       },
       {
         title: "Hanabi Izakaya – Restaurant Landing Page",
@@ -758,10 +758,10 @@ export const footer = {
     { name: "E-books", href: "#" },
   ],
   social: [
-    { name: "Facebook", icon: Facebook },
-    { name: "Instagram", icon: Instagram },
-    { name: "X", icon: Twitter },
-    { name: "LinkedIn", icon: Linkedin },
+    { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/esleytelllc" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/esleytelllc" },
+    { name: "X", icon: Twitter, href: "https://x.com/esleytelllc" },
+    { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/esleytelllc" },
   ],
   policies: [
     { name: "Privacy Policy", href: "/privacy-policy" },
