@@ -1,5 +1,4 @@
 import React from 'react';
-import { AuroraText } from "@/components/magicui/aurora-text";
 import { MaskContainer } from '@/components/ui/svg-mask-effect';
 import { PointerHighlight } from '@/components/ui/pointer-highlight';
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
-import HomeButton from "../HomeButton/HomeButton";
 
 export default function Section1() {
   return (

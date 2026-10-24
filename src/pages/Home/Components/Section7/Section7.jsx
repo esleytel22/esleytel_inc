@@ -1,6 +1,5 @@
 import React from "react";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
-import HomeButton from "../HomeButton/HomeButton";
 import { scrollToHash } from "@/lib/scrollToHash";
 
 export function ScrollBasedVelocityDemo({ is_reverse = false }) {

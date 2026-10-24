@@ -3,7 +3,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
-import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from 'vite-plugin-pwa';
 
 // The root index.html is the built, live file served by GitHub Pages. The
@@ -47,13 +46,13 @@ export default defineConfig({
      VitePWA({
       registerType: 'autoUpdate', // automatically update service worker
       manifest: {
-        name: 'My Vite React App',
-        short_name: 'MyApp',
-        description: 'My awesome React app',
-        theme_color: '#ffffff',
-        background_color: '#ffffff',
+        name: 'Esleytel LLC.',
+        short_name: 'Esleytel',
+        description: 'Esleytel LLC. is a creative tech studio crafting digital experiences through websites, branding, and software solutions.',
+        theme_color: '#0a0a0a',
+        background_color: '#0a0a0a',
         display: 'standalone',
-        start_url: '/',//start_url: '/',
+        start_url: '/',
         icons: [
           {
             src: 'icon-192x192.png',
@@ -68,9 +67,7 @@ export default defineConfig({
         ]
       }
     }),
-
-
-visualizer({open: true})],
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -81,6 +78,9 @@ visualizer({open: true})],
   },
   server: {
     allowedHosts: ['.loca.lt'],
+    warmup: {
+      clientFiles: ['./src/main.jsx', './src/app/**/*.jsx', './src/pages/**/*.jsx', './utils/content.jsx'],
+    },
   },
   build: {
   cssCodeSplit: true,
