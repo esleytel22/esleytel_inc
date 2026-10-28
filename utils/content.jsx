@@ -32,6 +32,7 @@ export const homepage = {
     cards: [
       {
         title: "Custom Web & Application Development",
+        category: "Development",
         intro:
           "Tailored digital designs that connect your brand with your audience, professionally and effectively.",
         capabilities:
@@ -41,6 +42,7 @@ export const homepage = {
       },
       {
         title: "Enterprise Document Management Solutions",
+        category: "Documents",
         intro: "Organizing your documents so your business can move faster.",
         capabilities:
           "Advanced SharePoint document support, including customized site development and design.",
@@ -49,6 +51,7 @@ export const homepage = {
       },
       {
         title: "Workplace Tech Services & Infrastructure",
+        category: "Support",
         intro:
           "Providing end-user workstations outfitted with industry-leading, top-of-the-line equipment.",
         capabilities:

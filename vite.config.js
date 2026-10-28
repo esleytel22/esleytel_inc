@@ -30,10 +30,44 @@ function sourceHtmlEntry() {
           html.fileName = 'index.html';
           bundle['index.html'] = html;
           delete bundle['index.template.html'];
+          emitRoutePages.call(this, String(html.source));
         }
       },
     },
   };
+}
+
+// GitHub Pages only serves files that exist on disk, so a direct visit to
+// /privacy-policy would be a real 404. Emit a copy of the app shell at each
+// route (served with 200 and the right canonical/title) plus a 404.html
+// fallback for any other address; React Router takes over once it loads.
+const SITE = 'https://esleytel.space';
+const ROUTE_PAGES = [
+  { dir: 'privacy-policy', title: 'Privacy Policy | Esleytel LLC.' },
+  { dir: 'terms-of-service', title: 'Terms of Service | Esleytel LLC.' },
+  // Legacy addresses: the app redirects these to a section of the home page.
+  { dir: 'about-us' },
+  { dir: 'portfolio' },
+  { dir: 'contact-us' },
+];
+
+function emitRoutePages(shell) {
+  for (const { dir, title } of ROUTE_PAGES) {
+    let page = shell;
+    if (title) {
+      const url = `${SITE}/${dir}/`;
+      page = page
+        .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
+        .replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${url}" />`)
+        .replace(/(property="og:url" content=")[^"]*"/, `$1${url}"`);
+    }
+    this.emitFile({ type: 'asset', fileName: `${dir}/index.html`, source: page });
+  }
+  const notFound = shell.replace(
+    /<meta name="robots" content="[^"]*"\s*\/?>/,
+    '<meta name="robots" content="noindex" />'
+  );
+  this.emitFile({ type: 'asset', fileName: '404.html', source: notFound });
 }
 
 export default defineConfig({
